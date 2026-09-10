@@ -1,0 +1,595 @@
+#!/usr/bin/env node
+/* -----------------------------------------------------------------------------
+ * Pause AR — fabrique du bulletin hebdomadaire
+ *
+ * Compare les articles présents dans index.html à ceux déjà signalés la semaine
+ * précédente (mémorisés dans bulletin/etat.json). S'il y a du nouveau, écrit un
+ * bulletin HTML prêt à imprimer, met à jour la page d'archives et le lien qui
+ * figure en tête du site.  S'il n'y a rien de neuf, ne produit aucun fichier.
+ *
+ * Usage :  node outils/bulletin.mjs [--date=AAAA-MM-JJ] [--init] [--apercu]
+ *                                   [--congres="ESC 2026"]
+ *   --init    : mémorise les articles actuels sans produire de bulletin
+ *               (à ne lancer qu'une fois, à la mise en place)
+ *   --apercu  : produit un bulletin d'essai à partir des articles les plus
+ *               récents, sans rien mémoriser ni modifier le site
+ *   --congres : bulletin et courriel prennent le titre « Récapitulatif des
+ *               sorties du congrès "…" » (lendemain de la fin d'un congrès)
+ *   --rappel  : s'il n'y a rien de neuf, écrit quand même le courriel du samedi ;
+ *               avec ou sans nouveauté, ce drapeau signale « un courriel part » et
+ *               fait écrire bulletin/semaine.json (la liste du courriel, que le site
+ *               affiche dans son bandeau « Cette semaine »), comme --congres
+ *   --semaine-seule : réécrit bulletin/semaine.json depuis la mémoire (dernier lot),
+ *               sans rien produire d'autre
+ *               (« Semaine calme »), qui rappelle les sorties du dernier bulletin
+ * --------------------------------------------------------------------------- */
+
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const RACINE   = join(dirname(fileURLToPath(import.meta.url)), '..');
+const SITE     = join(RACINE, 'index.html');
+const DOSSIER  = join(RACINE, 'bulletin');
+const ETAT     = join(DOSSIER, 'etat.json');
+
+const args    = process.argv.slice(2);
+const opt     = n => args.includes('--' + n);
+const valeur  = n => (args.find(a => a.startsWith('--' + n + '=')) || '').split('=')[1] || '';
+
+/* ---------------------------------------------------------------- utilitaires */
+
+const MOIS = ['janvier','février','mars','avril','mai','juin','juillet','août',
+              'septembre','octobre','novembre','décembre'];
+
+function aujourdhui() {
+  const f = new Intl.DateTimeFormat('fr-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' });
+  return f.format(new Date());                       // AAAA-MM-JJ
+}
+function enFrancais(iso) {
+  const [a, m, j] = iso.split('-').map(Number);
+  return `${j} ${MOIS[m - 1]} ${a}`;
+}
+function enFrancaisCourt(iso) {
+  const [, m, j] = iso.split('-').map(Number);
+  return `${j} ${MOIS[m - 1]}`;
+}
+/** le lundi de la semaine qui contient la date donnée (AAAA-MM-JJ) */
+function lundiDeLaSemaine(iso) {
+  const d = new Date(iso + 'T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() - (d.getUTCDay() + 6) % 7);
+  return d.toISOString().slice(0, 10);
+}
+/** date de parution AAAA-MM-JJ lue dans la ligne .meta (« NEJM · 28 août 2026 · … »),
+ *  même règle que dateParution() dans index.html ; '' si le jour n'y figure pas. */
+function dateParution(a) {
+  const sansAccent = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const m = sansAccent(brut(a.meta).toLowerCase()).match(/(\d{1,2})(?:er)?\s+([a-z]+)\s+(\d{4})/);
+  if (!m) return '';
+  const k = MOIS.map(sansAccent).indexOf(m[2]);
+  return k >= 0 ? `${m[3]}-${String(k + 1).padStart(2, '0')}-${m[1].padStart(2, '0')}` : '';
+}
+/** décalage d'une date ISO de n jours */
+function decaler(iso, n) {
+  const d = new Date(iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+/** texte brut, sans balises ni entités — sert de clé de comparaison */
+function brut(html) {
+  return html
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&rsquo;|&#8217;/g, '’')
+    .replace(/&[a-zA-Z]+;/g, m => ENTITES[m] ?? ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+const ENTITES = {
+  '&eacute;':'é','&egrave;':'è','&ecirc;':'ê','&agrave;':'à','&acirc;':'â','&ccedil;':'ç',
+  '&ugrave;':'ù','&ucirc;':'û','&icirc;':'î','&iuml;':'ï','&ouml;':'ö','&ocirc;':'ô',
+  '&laquo;':'«','&raquo;':'»','&middot;':'·','&hellip;':'…','&mdash;':'—','&ndash;':'–',
+};
+/** clé stable d'un article : son titre, sans accents ni ponctuation */
+function cle(titreHtml) {
+  return brut(titreHtml).toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+/* ------------------------------------------------------- lecture des articles */
+
+// même ordre et mêmes couleurs que la table SPECS du script d'index.html :
+// changer l'une sans l'autre casserait le rangement du courriel.
+const SPECS = {
+  periop:      { nom: 'Anesthésie périopératoire',                   couleur: '#2a78d6' },
+  alr:         { nom: 'Anesthésie locorégionale & douleur',          couleur: '#e87ba4' },
+  vent:        { nom: 'Ventilation, SDRA & oxygénation',             couleur: '#0f95a8' },
+  sepsis:      { nom: 'Sepsis & infections graves',                  couleur: '#6b7f2e' },
+  hemo:        { nom: 'Hémodynamique, choc & remplissage',           couleur: '#eb6834' },
+  neurotrauma: { nom: 'Neuroréanimation & traumatologie',            couleur: '#4a3aa7' },
+  obst:        { nom: 'Anesthésie obstétricale',                     couleur: '#1baf7a' },
+  ped:         { nom: 'Anesthésie-réanimation pédiatrique',          couleur: '#eda100' },
+  arret:       { nom: 'Arrêt cardiaque, urgences & pré-hospitalier', couleur: '#a8348c' },
+};
+const NIVEAUX = {
+  crit:  { nom: 'Changement de pratique probable', court: 'Changement de pratique', couleur: '#d03b3b', rang: 0 },
+  warn:  { nom: 'À connaître',                     court: 'À connaître',            couleur: '#c98500', rang: 1 },
+  watch: { nom: 'Veille — à suivre',               court: 'Veille',                 couleur: '#898781', rang: 2 },
+};
+
+function lireArticles(html) {
+  const articles = [];
+  const re = /<article class="card[^"]*"([^>]*)>([\s\S]*?)<\/article>/g;
+  let m;
+  while ((m = re.exec(html))) {
+    const [, attrs, corps] = m;
+    const attr  = n => (attrs.match(new RegExp(n + '="([^"]*)"')) || [])[1] || '';
+    const bloc  = re2 => (corps.match(re2) || [])[1] || '';
+    const titre = bloc(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+    if (!titre) continue;
+    const actions = bloc(/<div class="actions">([\s\S]*?)<\/div>/);
+    const liens = [...actions.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)]
+      .map(([, href, texte]) => ({ href, texte: brut(texte).replace(/\s*↗\s*$/, '').replace(/\s*&#8599;\s*$/, '').trim() }));
+    articles.push({
+      cle:     cle(titre),
+      accroche: attr('data-fr'),
+      chiffre: bloc(/<div class="cle">([\s\S]*?)<\/div>/),
+      spec:    attr('data-spec'),
+      annee:   attr('data-year'),
+      niveau:  attr('data-lvl') || 'watch',
+      titre,
+      type:    bloc(/<span class="type">([\s\S]*?)<\/span>/),
+      meta:    bloc(/<div class="meta">([\s\S]*?)<\/div>/),
+      resume:  bloc(/<p class="sum">([\s\S]*?)<\/p>/),
+      cabinet: bloc(/<div class="verdict">([\s\S]*?)<\/div>/),
+      liens,
+    });
+  }
+  poserAncres(articles);
+  return articles;
+}
+
+/** même règle de nommage que dans le script d'index.html : ne changer ni l'une
+ *  ni l'autre isolément, les liens des bulletins déjà envoyés en dépendent. */
+function poserAncres(articles) {
+  const pris = new Set();
+  for (const a of articles) {
+    let base = brut(a.titre).toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 64).replace(/-+$/, '');
+    let libre = base, n = 2;
+    while (pris.has(libre)) libre = base + '-' + n++;
+    pris.add(libre);
+    a.ancre = libre;
+  }
+}
+
+/* ------------------------------------------ la liste du courriel, pour le site */
+
+/** sujet du courriel en texte brut (le même que dans rendreCourriel, sans entités) */
+function sujetTexte(dateIso, { congres = '', rappel = false } = {}) {
+  const lundi = lundiDeLaSemaine(dateIso);
+  const lundiPrecedent = decaler(lundi, -7);
+  if (congres) return `Récapitulatif des sorties du congrès « ${congres} »`;
+  if (rappel) return `Semaine calme — rappel des sorties de la semaine du lundi ${enFrancaisCourt(lundiPrecedent)}`;
+  return `Les sorties de la semaine du lundi ${enFrancaisCourt(lundi)}`;
+}
+/**
+ * bulletin/semaine.json : la liste exacte des articles du courriel qui part, dans
+ * l'ordre du courriel (surspécialité, puis ordre de la page). Le script d'index.html
+ * la lit pour le bandeau « Cette semaine » et la pastille « nouveau » : le site
+ * rappelle ce que le courriel a annoncé, et change donc le samedi, pas au fil des
+ * jours (décision du 09/09/2026). Écrit seulement quand un courriel part vraiment
+ * (--rappel le samedi, --congres pour un récapitulatif), jamais les matins de congrès.
+ */
+function ecrireSemaine(lot, dateIso, { congres = '', rappel = false } = {}) {
+  const ordre = Object.keys(SPECS).flatMap(id => lot.filter(a => a.spec === id));
+  const lundi = lundiDeLaSemaine(dateIso);
+  const semaine = {
+    date: dateIso,
+    sujet: sujetTexte(dateIso, { congres, rappel }),
+    rappel: !!rappel,
+    congres: congres || '',
+    lundi: rappel ? decaler(lundi, -7) : lundi,
+    nb: ordre.length,
+    ancres: ordre.map(a => a.ancre),
+  };
+  writeFileSync(join(DOSSIER, 'semaine.json'), JSON.stringify(semaine, null, 1) + '\n');
+  console.log(`SEMAINE bulletin/semaine.json — ${ordre.length} article(s) : ${semaine.sujet}`);
+}
+
+/* --------------------------------------------------------- rendu du bulletin */
+
+function rendreBulletin(nouveaux, dateIso, congres = '') {
+  const tri = [...nouveaux].sort((a, b) =>
+    (NIVEAUX[a.niveau]?.rang ?? 9) - (NIVEAUX[b.niveau]?.rang ?? 9)
+    || a.spec.localeCompare(b.spec));
+
+  const n = tri.length;
+  const nbCrit = tri.filter(a => a.niveau === 'crit').length;
+  const chapeau = nbCrit
+    ? `${n} nouveaut&eacute;${n > 1 ? 's' : ''} cette semaine, dont ${nbCrit} susceptible${nbCrit > 1 ? 's' : ''} de changer votre pratique.`
+    : `${n} nouveaut&eacute;${n > 1 ? 's' : ''} cette semaine — aucune ne modifie la pratique dans l&rsquo;imm&eacute;diat.`;
+
+  const entrees = tri.map(a => {
+    const spec   = SPECS[a.spec]   || { nom: a.spec, couleur: '#898781' };
+    const niveau = NIVEAUX[a.niveau];
+    const lienPrincipal = (a.liens.find(l => /original/i.test(l.texte)) || a.liens[0] || {}).href || '';
+    const autres = a.liens.filter(l => l.href !== lienPrincipal);
+    return `
+    <article class="e${a.niveau === 'crit' ? ' une' : ''}">
+      <div class="fil" style="background:${spec.couleur}"></div>
+      <div class="txt">
+        <div class="ligne1">
+          <span class="spec" style="color:${spec.couleur}">${spec.nom}</span>
+          <span class="niv" style="background:${niveau.couleur}">${niveau.court}</span>
+          ${a.type ? `<span class="type">${a.type}</span>` : ''}
+        </div>
+        <h3>${lienPrincipal ? `<a href="${lienPrincipal}">${a.titre}</a>` : a.titre}</h3>
+        ${a.meta ? `<div class="meta">${a.meta}</div>` : ''}
+        ${a.resume ? `<p class="sum">${a.resume}</p>` : ''}
+        ${a.cabinet ? `<div class="cab">${a.cabinet}</div>` : ''}
+        <div class="liens">${
+          [lienPrincipal ? { href: lienPrincipal, texte: 'Article original' } : null, ...autres]
+            .filter(Boolean)
+            .map(l => `<a href="${l.href}">${l.texte || 'Lien'}</a>`).join('<span class="sep">·</span>')
+        }</div>
+      </div>
+    </article>`;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Pause AR — bulletin du ${enFrancais(dateIso)}</title>
+<style>
+  @page { size: A4; margin: 14mm 13mm 15mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #111; background: #fff;
+         font-size: 10.4pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { max-width: 185mm; margin: 0 auto; padding: 10mm 6mm; }
+  @media print { .page { padding: 0; } }
+
+  header.tete { border-bottom: 2px solid #111; padding-bottom: 7px; margin-bottom: 4px; }
+  .tete .sur { font-size: 8pt; letter-spacing: .10em; text-transform: uppercase; color: #6b6a66; font-weight: 700; }
+  .tete h1 { font-size: 19pt; font-weight: 800; margin-top: 3px; letter-spacing: -.01em; }
+  .tete h1 .c { color: #0d6e6b; letter-spacing: -.06em; }
+  .tete .date { font-size: 9.5pt; color: #52514e; margin-top: 3px; }
+  .chapeau { margin: 12px 0 16px; font-size: 10.5pt; color: #333; }
+
+  article.e { display: flex; gap: 9px; padding: 11px 0 12px; border-bottom: 1px solid #e4e3dc;
+              page-break-inside: avoid; break-inside: avoid; }
+  article.e:last-of-type { border-bottom: none; }
+  article.e.une { background: #fdf6f6; border-left: 0; padding-left: 8px; padding-right: 8px;
+                  border-radius: 4px; border-bottom: 1px solid #f0dede; }
+  .fil { width: 3px; border-radius: 2px; flex: none; }
+  .txt { flex: 1; min-width: 0; }
+  .ligne1 { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-bottom: 4px; }
+  .ligne1 .spec { font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .ligne1 .niv { font-size: 7.5pt; font-weight: 700; color: #fff; border-radius: 99px; padding: 1.5px 7px; letter-spacing: .02em; }
+  .ligne1 .type { font-size: 8pt; color: #7a7975; font-weight: 600; }
+  h3 { font-size: 11.6pt; line-height: 1.28; font-weight: 700; }
+  h3 a { color: #111; text-decoration: none; }
+  .meta { font-size: 9pt; color: #52514e; margin-top: 2px; }
+  .sum { font-size: 9.8pt; color: #2c2c2a; margin-top: 5px; }
+  .cab { font-size: 9.6pt; margin-top: 6px; padding: 6px 9px; background: #f4f4f0;
+         border-left: 2px solid #111; border-radius: 0 4px 4px 0; }
+  .liens { margin-top: 5px; font-size: 8.4pt; }
+  .liens a { color: #2a78d6; text-decoration: none; }
+  .liens .sep { color: #b5b4ac; margin: 0 6px; }
+
+  footer.pied { margin-top: 18px; padding-top: 8px; border-top: 1px solid #d8d7cf;
+                font-size: 8.2pt; color: #7a7975; line-height: 1.5; page-break-inside: avoid; }
+  footer.pied a { color: #7a7975; }
+  footer.pied b { color: #52514e; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="tete">
+    <div class="sur">Bulletin hebdomadaire &middot; veille en anesth&eacute;sie-r&eacute;animation</div>
+    <h1>PAUSE AR <span class="c">&#10073;&#10073;</span></h1>
+    <div class="date">${congres
+      ? `R&eacute;capitulatif des sorties du congr&egrave;s &laquo;&nbsp;${congres}&nbsp;&raquo;`
+      : `Nouveaut&eacute;s de la semaine du ${enFrancais(dateIso)}`}</div>
+  </header>
+  <p class="chapeau">${chapeau}</p>
+${entrees}
+  <footer class="pied">
+    Tableau de bord complet &mdash; toutes les sorties, recherche FR/EN, fiches de lecture :
+    <a href="https://hacuubo.github.io/pause-ar/">hacuubo.github.io/pause-ar</a><br>
+    <b>Fiches r&eacute;dig&eacute;es &agrave; l&rsquo;aide de l&rsquo;IA &mdash; r&eacute;sum&eacute;s &agrave; valider par le lecteur avant toute application clinique, se reporter aux articles originaux.</b>
+  </footer>
+</div>
+</body>
+</html>`;
+}
+
+/* ------------------------------------------------------------- courriel */
+
+/** Le bulletin en version e-mail, au visuel de la plateforme : les articles
+ *  sont rangés par surspécialité (nom en tête dans sa couleur, puis ses
+ *  articles, dans l'ordre de la page), sans badge de niveau — chaque bloc
+ *  commence directement par le titre. Le titre est du texte : seul le lien
+ *  « Lire la fiche » (et le bouton du bas), en couleur de marque, mènent au site.
+ *  Sujet : « Les sorties de la semaine du lundi … », ou, quand --congres
+ *  est fourni, « Récapitulatif des sorties du congrès "…" ».
+ *  HTML « à l'ancienne » (tableaux, styles en ligne), seule forme que
+ *  Gmail, Outlook et Apple Mail affichent tous correctement. */
+function rendreCourriel(nouveaux, dateIso, { congres = '', rappel = false } = {}) {
+  const SITE_URL = 'https://hacuubo.github.io/pause-ar/';
+  const n = nouveaux.length;
+  const lundi = lundiDeLaSemaine(dateIso);
+  const lundiPrecedent = new Date(lundi + 'T12:00:00Z');
+  lundiPrecedent.setUTCDate(lundiPrecedent.getUTCDate() - 7);
+  const sujet = congres
+    ? `Récapitulatif des sorties du congrès «&nbsp;${congres}&nbsp;»`
+    : rappel
+      ? `Semaine calme — rappel des sorties de la semaine du lundi ${enFrancaisCourt(lundiPrecedent.toISOString().slice(0, 10))}`
+      : `Les sorties de la semaine du lundi ${enFrancaisCourt(lundi)}`;
+  const chapeau = congres
+    ? `${n} sortie${n > 1 ? 's' : ''} retenue${n > 1 ? 's' : ''} du congrès ${congres} — le détail de chaque fiche est sur le site.`
+    : rappel
+      ? `Aucune sortie d’ampleur dans les grandes revues ces derniers jours. En attendant les prochaines, voici un rappel des sorties de la semaine dernière — le détail de chaque fiche est sur le site.`
+      : `${n} nouvelle${n > 1 ? 's' : ''} sortie${n > 1 ? 's' : ''} cette semaine — le détail de chaque fiche est sur le site.`;
+
+  // groupement par surspécialité, dans l'ordre de la plateforme ;
+  // au sein d'un groupe, l'ordre de la page est conservé (derniers parus en tête)
+  const sections = Object.entries(SPECS)
+    .map(([id, spec]) => ({ spec, articles: nouveaux.filter(a => a.spec === id) }))
+    .filter(s => s.articles.length);
+  const orphelins = nouveaux.filter(a => !SPECS[a.spec]);
+  if (orphelins.length) sections.push({ spec: { nom: 'Autres', couleur: '#898781' }, articles: orphelins });
+
+  const blocs = sections.map(({ spec, articles }) => {
+    const tete = `
+    <tr><td style="padding:14px 34px 8px;">
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;letter-spacing:.8px;text-transform:uppercase;color:${spec.couleur};border-bottom:2px solid ${spec.couleur};padding-bottom:5px;">${spec.nom}
+        <span style="font-weight:normal;text-transform:none;letter-spacing:0;color:#898781;">&nbsp;·&nbsp;${articles.length}&nbsp;sortie${articles.length > 1 ? 's' : ''}</span></div>
+    </td></tr>`;
+    const cartes = articles.map(a => {
+      const lien = SITE_URL + '#' + a.ancre;
+      const fond = /recommandation/i.test(brut(a.type)) ? '#fbf2f1' : '#fcfcfb';
+      return `
+    <tr><td style="padding:0 34px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             style="background:${fond};border:1px solid #e4e3dc;border-left:3px solid ${spec.couleur};border-radius:12px;">
+        <tr><td style="padding:12px 14px 13px;">
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:1.32;font-weight:bold;color:#0b0b0b;">${a.titre}</div>
+          ${a.accroche ? `<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#52514e;line-height:1.35;margin-top:3px;">${a.accroche}</div>` : ''}
+          ${a.meta ? `<div style="font-family:Helvetica,Arial,sans-serif;font-size:11.5px;color:#898781;margin-top:3px;">${a.meta}</div>` : ''}
+          ${a.chiffre ? `<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#52514e;line-height:1.5;background:#f2f2ee;border:1px solid #e4e3dc;border-radius:10px;padding:8px 12px;margin-top:9px;"><span style="display:block;font-size:10.5px;font-weight:bold;letter-spacing:.9px;color:#898781;margin-bottom:3px;">RÉSULTAT PRINCIPAL</span>${a.chiffre}</div>` : ''}
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;margin-top:10px;">
+            <a href="${lien}" style="color:#0d6e6b;font-weight:bold;text-decoration:none;">Lire la fiche sur Pause AR &rarr;</a>
+          </div>
+        </td></tr>
+      </table>
+      <div style="font-size:8px;line-height:8px;">&nbsp;</div>
+    </td></tr>`;
+    }).join('\n');
+    return tete + '\n' + cartes;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${brut(sujet)}</title>
+</head>
+<body style="margin:0;padding:0;background:#f9f9f7;">
+<div style="display:none;max-height:0;overflow:hidden;">${chapeau}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f9f9f7;">
+  <tr><td align="center" style="padding:26px 10px;">
+    <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+      <tr><td align="center" style="padding:0 20px 6px;">
+        <div style="font-family:Helvetica,Arial,sans-serif;font-size:26px;font-weight:bold;letter-spacing:5px;color:#0b0b0b;">PAUSE&nbsp;CARDIO</div>
+        <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#52514e;margin-top:5px;font-weight:bold;">${sujet}</div>
+        <div style="height:6px;border-radius:3px;background:#0d6e6b;margin-top:12px;font-size:0;line-height:0;">&nbsp;</div>
+      </td></tr>
+      <tr><td style="padding:14px 20px 4px;">
+        <div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;color:#333333;">${chapeau}</div>
+      </td></tr>
+${blocs}
+      <tr><td align="center" style="padding:12px 20px 8px;">
+        <a href="${SITE_URL}" style="font-family:Helvetica,Arial,sans-serif;font-size:13.5px;font-weight:bold;color:#ffffff;background:#0d6e6b;border-radius:8px;padding:11px 22px;text-decoration:none;display:inline-block;">Ouvrir le tableau de bord complet</a>
+      </td></tr>
+      <tr><td style="padding:16px 20px 8px;">
+        <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;color:#898781;line-height:1.55;border-top:1px solid #e4e3dc;padding-top:12px;">
+          <b style="color:#52514e;">Pause AR</b> — veille bibliographique hebdomadaire en anesthésie-réanimation.
+          Fiches r&eacute;dig&eacute;es &agrave; l&rsquo;aide de l&rsquo;IA &mdash; r&eacute;sum&eacute;s &agrave; valider par le lecteur avant toute application clinique, se reporter aux articles originaux.<br>
+          Vous recevez ce message parce que vous vous &ecirc;tes inscrit sur <a href="${SITE_URL}" style="color:#898781;">hacuubo.github.io/pause-ar</a>.
+          <a href="{{ unsubscribe }}" style="color:#898781;">Se d&eacute;sinscrire</a>
+        </div>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>`;
+}
+
+/* --------------------------------------------------------- page d'archives */
+
+function rendreArchives(bulletins) {
+  const lignes = [...bulletins].sort((a, b) => b.date.localeCompare(a.date)).map((b, i) => `
+      <li${i === 0 ? ' class="dernier"' : ''}>
+        <a class="pdf" href="${b.fichier}">Bulletin du ${enFrancais(b.date)}</a>
+        <span class="n">${b.nb} nouveaut&eacute;${b.nb > 1 ? 's' : ''}${b.crit ? ` &middot; ${b.crit} &#9733;` : ''}</span>
+      </li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pause AR — bulletins hebdomadaires</title>
+<meta name="description" content="Tous les bulletins hebdomadaires Pause AR : les nouvelles sorties bibliographiques en anesthésie-réanimation de chaque semaine, avec fiches de lecture.">
+<link rel="canonical" href="https://hacuubo.github.io/pause-ar/bulletin/">
+<link rel="icon" href="../icone/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="../icone/pausear-180.png">
+<style>
+  :root { color-scheme: light dark; --page:#f9f9f7; --surface:#fcfcfb; --texte:#0b0b0b;
+          --doux:#52514e; --muet:#898781; --bord:rgba(11,11,11,.10); --marque:#0d6e6b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --page:#0d0d0d; --surface:#1a1a19; --texte:#fff; --doux:#c3c2b7; --muet:#898781;
+            --bord:rgba(255,255,255,.10); --marque:#3aada6; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--page);
+         color: var(--texte); line-height: 1.45; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 64px; }
+  .eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muet); font-weight: 600; }
+  h1 { font-size: 26px; margin-top: 4px; }
+  h1 .c { color: var(--marque); letter-spacing: -.06em; }
+  .retour { display: inline-block; margin-top: 14px; font-size: 14px; color: var(--doux); }
+  ul { list-style: none; margin-top: 26px; }
+  li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; background: var(--surface);
+       border: 1px solid var(--bord); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  li.dernier { border-color: var(--texte); box-shadow: inset 0 0 0 1px var(--texte); }
+  li a.pdf { font-size: 15.5px; font-weight: 600; color: var(--texte); text-decoration: none; }
+  li a.pdf::before { content: "\\1F4C4\\00A0"; }
+  li .n { font-size: 13px; color: var(--muet); margin-left: auto; }
+  .vide { color: var(--muet); font-size: 14.5px; margin-top: 26px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Pause AR &middot; archives</div>
+  <h1>Bulletins hebdomadaires <span class="c">&#10073;&#10073;</span></h1>
+  <a class="retour" href="../">&#8592; Retour au tableau de bord</a>
+  ${bulletins.length ? `<ul>${lignes}\n  </ul>` : '<p class="vide">Aucun bulletin pour le moment — le premier para&icirc;tra d&egrave;s qu&rsquo;une nouvelle sortie sera ajout&eacute;e au tableau de bord.</p>'}
+</div>
+<!-- fréquentation : GoatCounter, sans cookie ni bandeau ; tableau de bord sur https://pausear.goatcounter.com -->
+<script data-goatcounter="https://pausear.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>`;
+}
+
+/** pose (ou remplace) le lien vers les bulletins dans l'en-tête du tableau de bord */
+function poserLien(html, lien) {
+  const marque = /<!--BULLETIN:DEBUT-->[\s\S]*?<!--BULLETIN:FIN-->/;
+  if (!marque.test(html)) {
+    console.warn('Repères <!--BULLETIN:DEBUT--> absents de index.html : lien non mis à jour.');
+    return;
+  }
+  writeFileSync(SITE, html.replace(marque, `<!--BULLETIN:DEBUT-->${lien}<!--BULLETIN:FIN-->`));
+}
+
+/* ------------------------------------------------------------------ exécution */
+
+const html     = readFileSync(SITE, 'utf8');
+const articles = lireArticles(html);
+if (!articles.length) { console.error('Aucun article trouvé dans index.html — arrêt.'); process.exit(1); }
+
+if (!existsSync(DOSSIER)) mkdirSync(DOSSIER, { recursive: true });
+const etat = existsSync(ETAT)
+  ? JSON.parse(readFileSync(ETAT, 'utf8'))
+  : { connus: [], bulletins: [], derniere_execution: null };
+
+const dateIso = valeur('date') || aujourdhui();
+const congres = valeur('congres');   // « ESC 2026 » → courriel/bulletin récapitulatifs de congrès
+
+if (opt('init')) {
+  etat.connus = articles.map(a => a.cle);
+  etat.derniere_execution = dateIso;
+  writeFileSync(ETAT, JSON.stringify(etat, null, 2) + '\n');
+  writeFileSync(join(DOSSIER, 'index.html'), rendreArchives(etat.bulletins));
+  poserLien(html, '');
+  console.log(`INIT ${etat.connus.length} articles mémorisés — aucun bulletin produit.`);
+  process.exit(0);
+}
+
+if (opt('semaine-seule')) {
+  const lot = new Set(etat.dernier_lot || []);
+  const dernier = [...(etat.bulletins || [])].sort((a, b) => a.date.localeCompare(b.date)).pop();
+  ecrireSemaine(articles.filter(a => lot.has(a.cle)), valeur('date') || (dernier ? dernier.date : dateIso), { rappel: opt('rappel') });
+  process.exit(0);
+}
+
+if (opt('apercu')) {
+  const lot = new Set(etat.dernier_lot || []);
+  const echantillon = opt('rappel') && lot.size
+    ? articles.filter(a => lot.has(a.cle))                 // le vrai rappel : les sorties du dernier bulletin
+    : articles.filter(a => a.annee === '2026').slice(0, 5);
+  const fichier = join(DOSSIER, 'apercu.html');
+  writeFileSync(fichier, rendreBulletin(echantillon, dateIso, congres));
+  writeFileSync(join(DOSSIER, 'courriel-apercu.html'), rendreCourriel(echantillon, dateIso, { congres, rappel: opt('rappel') }));
+  console.log('APERCU ' + fichier + ' (+ courriel-apercu.html)');
+  process.exit(0);
+}
+
+/* Ce qui fait foi, c'est la DATE DE PARUTION dans la revue (ligne .meta), pas la
+   date d'ajout sur le site (décision du 04/09/2026). La semaine écoulée va du samedi
+   précédent (jour du dernier courriel) au samedi de la routine, inclus (règle
+   confirmée le 09/09/2026) ; tout article déjà annoncé par un courriel précédent
+   (mémoire etat.json) est retiré, même s'il est dans la fenêtre. Un article ajouté
+   après coup (rattrapage, nouvelle surspécialité) ou sans jour lisible est mémorisé
+   sans être annoncé — la semaine reste « calme » s'il n'y a que cela. */
+const FENETRE_JOURS = 7;
+const depuis   = decaler(dateIso, -FENETRE_JOURS);
+const connus   = new Set(etat.connus);
+const inconnus = articles.filter(a => !connus.has(a.cle));
+const nouveaux = inconnus.filter(a => { const p = dateParution(a); return p && p >= depuis && p <= dateIso; });
+const ecartes  = inconnus.filter(a => !nouveaux.includes(a));
+const dejaAnnonces = articles.filter(a => connus.has(a.cle) && dateParution(a) >= depuis).length;
+console.log(`FENETRE parutions du ${depuis} au ${dateIso} — ${nouveaux.length} nouveauté(s), ${dejaAnnonces} déjà annoncée(s) par un courriel précédent (retirées)`);
+for (const a of ecartes) {
+  const p = dateParution(a);
+  console.log(`HORS_SEMAINE ${p ? 'paru le ' + p : 'SANS JOUR dans .meta'} — mémorisé sans bulletin : ${brut(a.titre).slice(0, 80)}`);
+}
+if (ecartes.length) etat.connus = [...new Set([...etat.connus, ...ecartes.map(a => a.cle)])];
+
+if (!nouveaux.length) {
+  etat.derniere_execution = dateIso;
+  writeFileSync(ETAT, JSON.stringify(etat, null, 2) + '\n');
+  if (opt('rappel')) {
+    // samedi calme : le courriel part quand même, avec les sorties du dernier bulletin
+    const lot = new Set(etat.dernier_lot || []);
+    let rappel = articles.filter(a => lot.has(a.cle));
+    if (!rappel.length) {
+      // pas de mémoire : on rappelle les sorties parues le plus récemment
+      rappel = articles.filter(a => dateParution(a)).sort((a, b) => dateParution(b).localeCompare(dateParution(a))).slice(0, 6);
+    }
+    const nom = `courriel-${dateIso}.html`;
+    writeFileSync(join(DOSSIER, nom), rendreCourriel(rappel, dateIso, { rappel: true }));
+    ecrireSemaine(rappel, dateIso, { rappel: true });
+    console.log(`RAPPEL ${rappel.length} sortie(s) du dernier bulletin → bulletin/${nom}`);
+    process.exit(0);
+  }
+  console.log('RIEN — aucune nouveauté cette semaine, pas de bulletin produit.');
+  process.exit(0);
+}
+
+const nomHtml = `bulletin-${dateIso}.html`;
+const nomPdf  = `bulletin-${dateIso}.pdf`;
+writeFileSync(join(DOSSIER, nomHtml), rendreBulletin(nouveaux, dateIso, congres));
+writeFileSync(join(DOSSIER, `courriel-${dateIso}.html`), rendreCourriel(nouveaux, dateIso, { congres }));
+if (opt('rappel') || congres) ecrireSemaine(nouveaux, dateIso, { congres });
+
+/* on garde aussi les clés des articles retirés du site : un article un jour supprimé
+   puis remis ne doit pas être re-signalé comme une nouveauté. */
+etat.connus = [...new Set([...etat.connus, ...articles.map(a => a.cle)])];
+etat.dernier_lot = nouveaux.map(a => a.cle);   // servira au courriel « Semaine calme »
+etat.bulletins = [
+  ...etat.bulletins.filter(b => b.date !== dateIso),
+  { date: dateIso, fichier: nomPdf, nb: nouveaux.length, crit: nouveaux.filter(a => a.niveau === 'crit').length },
+];
+etat.derniere_execution = dateIso;
+writeFileSync(ETAT, JSON.stringify(etat, null, 2) + '\n');
+writeFileSync(join(DOSSIER, 'index.html'), rendreArchives(etat.bulletins));
+
+// tient le sitemap à jour : accueil et archives changent avec chaque bulletin
+const SITEMAP = join(RACINE, 'sitemap.xml');
+if (existsSync(SITEMAP)) {
+  writeFileSync(SITEMAP, readFileSync(SITEMAP, 'utf8')
+    .replace(/(<loc>https:\/\/pausear\.fr\/<\/loc>\s*<lastmod>)[^<]+/, `$1${dateIso}`)
+    .replace(/(<loc>https:\/\/pausear\.fr\/bulletin\/<\/loc>\s*<lastmod>)[^<]+/, `$1${dateIso}`));
+}
+
+// depuis le 29/08/2026 le tableau de bord n'affiche plus de lien vers le PDF :
+// le bulletin part par courriel, les archives restent accessibles sur /bulletin/.
+poserLien(html, '');
+
+console.log(`BULLETIN ${nouveaux.length} nouveauté(s) → bulletin/${nomHtml}`);
+nouveaux.forEach(a => console.log('  · [' + a.niveau + '] ' + brut(a.titre)));

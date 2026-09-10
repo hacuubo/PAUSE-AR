@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180" role="img" aria-label="Pause AR">
+  <rect width="180" height="180" rx="40" fill="#141412"/>
+  <path d="M0,116 H14 L30,60 L52,54 L66,116 H180" fill="none" stroke="#f2f1ea" stroke-width="11"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="86" y="40" width="19" height="100" rx="8" fill="#3aada6"/>
+  <rect x="116" y="40" width="19" height="100" rx="8" fill="#3aada6"/>
+</svg>

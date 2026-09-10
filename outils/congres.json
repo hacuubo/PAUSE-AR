@@ -1,0 +1,51 @@
+{
+  "_lire_moi": [
+    "Calendrier des congrès suivis par Pause AR. Lu chaque matin par outils/congres.mjs.",
+    "niveau 1 = congrès qui font l'actualité de la spécialité : mise à jour quotidienne du site",
+    "  pendant le congrès, courriel récapitulatif le lendemain de la clôture (07:50), pas de",
+    "  courriel le samedi s'il tombe dedans.",
+    "niveau 2 = congrès repris par la veille du samedi, sans mode propre.",
+    "Dates au format AAAA-MM-JJ, jamais inventées : 'confirme': true seulement si lues sur le site",
+    "  officiel (champ 'source'). Une édition sans date connue garde debut/fin à null.",
+    "Entretien : le lendemain de la clôture d'un congrès, la routine cherche l'édition suivante et",
+    "  l'ajoute ; le premier samedi de janvier, elle revérifie toutes les dates de l'année."
+  ],
+  "congres": [
+    { "famille": "sfar", "sigle": "SFAR 2026", "nom": "Congrès national d'anesthésie et de réanimation SFAR 2026", "niveau": 1,
+      "ville": "Paris", "debut": "2026-09-16", "fin": "2026-09-18", "confirme": true,
+      "source": "https://www.sfar-lecongres.com/" },
+    { "famille": "sfar", "sigle": "SFAR 2027", "nom": "Congrès national d'anesthésie et de réanimation SFAR 2027", "niveau": 1,
+      "ville": "Paris", "debut": null, "fin": null, "confirme": false, "prochaine_verification": "2026-09-24",
+      "source": "https://www.sfar-lecongres.com/" },
+
+    { "famille": "esaic", "sigle": "ESAIC 2027", "nom": "Euroanaesthesia 2027 (ESAIC)", "niveau": 1,
+      "ville": "Copenhague", "debut": "2027-05-29", "fin": "2027-05-31", "confirme": true,
+      "source": "https://euroanaesthesia.org/2027" },
+
+    { "famille": "esicm", "sigle": "ESICM 2026", "nom": "ESICM LIVES 2026 — 39e congrès annuel", "niveau": 1,
+      "ville": "Lisbonne", "debut": "2026-10-10", "fin": "2026-10-14", "confirme": true,
+      "source": "https://www.esicm.org/events/39th-annual-congress-lisbon/" },
+    { "famille": "esicm", "sigle": "ESICM 2027", "nom": "ESICM LIVES 2027 — 40e congrès annuel", "niveau": 1,
+      "ville": "Copenhague", "debut": "2027-09-25", "fin": "2027-09-29", "confirme": true,
+      "source": "https://www.esicm.org/events/40th-annual-congress-copenhagen/" },
+
+    { "famille": "asa", "sigle": "ASA 2026", "nom": "ANESTHESIOLOGY 2026 (American Society of Anesthesiologists)", "niveau": 2,
+      "ville": "San Diego", "debut": "2026-10-16", "fin": "2026-10-20", "confirme": true,
+      "source": "https://www.asahq.org/annualmeeting" },
+    { "famille": "asa", "sigle": "ASA 2027", "nom": "ANESTHESIOLOGY 2027 (American Society of Anesthesiologists)", "niveau": 2,
+      "ville": "Boston", "debut": "2027-10-15", "fin": "2027-10-19", "confirme": true,
+      "source": "https://www.asahq.org/annualmeeting/attend/futuredates" },
+
+    { "famille": "sccm", "sigle": "SCCM 2027", "nom": "SCCM Critical Care Congress 2027", "niveau": 2,
+      "ville": "San Diego", "debut": "2027-03-14", "fin": "2027-03-16", "confirme": true,
+      "source": "https://sccm.org/annual-congress/future-congress-dates" },
+
+    { "famille": "isicem", "sigle": "ISICEM 2027", "nom": "46e International Symposium on Intensive Care and Emergency Medicine", "niveau": 2,
+      "ville": "Bruxelles", "debut": null, "fin": null, "confirme": false, "prochaine_verification": "2026-09-24",
+      "source": "https://www.isicem.org/" },
+
+    { "famille": "ats", "sigle": "ATS 2027", "nom": "ATS 2027 International Conference (American Thoracic Society)", "niveau": 2,
+      "ville": "La Nouvelle-Orléans", "debut": "2027-05-14", "fin": "2027-05-19", "confirme": true,
+      "source": "https://site.thoracic.org/conference/attendees/future-conferences" }
+  ]
+}
