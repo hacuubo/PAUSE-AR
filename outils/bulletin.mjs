@@ -351,7 +351,7 @@ function rendreCourriel(nouveaux, dateIso, { congres = '', rappel = false } = {}
     </td></tr>`;
     const cartes = articles.map(a => {
       const lien = SITE_URL + '#' + a.ancre;
-      const fond = /recommandation/i.test(brut(a.type)) ? '#fbf2f1' : '#fcfcfb';
+      const fond = /recommandation/i.test(brut(a.type)) ? '#f1f7f6' : '#fcfcfb';
       return `
     <tr><td style="padding:0 34px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
@@ -385,7 +385,7 @@ function rendreCourriel(nouveaux, dateIso, { congres = '', rappel = false } = {}
   <tr><td align="center" style="padding:26px 10px;">
     <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
       <tr><td align="center" style="padding:0 20px 6px;">
-        <div style="font-family:Helvetica,Arial,sans-serif;font-size:26px;font-weight:bold;letter-spacing:5px;color:#0b0b0b;">PAUSE&nbsp;CARDIO</div>
+        <div style="font-family:Helvetica,Arial,sans-serif;font-size:26px;font-weight:bold;letter-spacing:5px;color:#0b0b0b;">PAUSE&nbsp;AR</div>
         <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#52514e;margin-top:5px;font-weight:bold;">${sujet}</div>
         <div style="height:6px;border-radius:3px;background:#0d6e6b;margin-top:12px;font-size:0;line-height:0;">&nbsp;</div>
       </td></tr>

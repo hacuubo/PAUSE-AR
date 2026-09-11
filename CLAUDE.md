@@ -590,7 +590,19 @@ Congrès (calendrier tenu dans `outils/congres.json`, deux niveaux) :
 ## Historique
 
 - 10/09/2026 — création de Pause AR à partir du dépôt terminé de Pause Cardio : même architecture,
-  mêmes outils, même chaîne qualité, même routine ; dix surspécialités d'anesthésie-réanimation,
-  nouvelles sources et nouveaux congrès, logo « pause dans la capnographie » et couleur de marque
-  bleu-vert (#0d6e6b / #3aada6). Puis « édition zéro » : rattrapage 2025–2026 des essais pivots,
-  recommandations et grandes méta-analyses, surspécialité par surspécialité.
+  mêmes outils, même chaîne qualité, même routine ; logo « pause dans la capnographie » et couleur de
+  marque bleu-vert (#0d6e6b / #3aada6), nouvelles sources et nouveaux congrès.
+- 11/09/2026 — dixième surspécialité (`sedation`, détachée d'`arret`), puis **édition zéro** :
+  rattrapage 2025–2026, **2 189 candidats examinés, 162 retenus** (périop 18, ventilation 20,
+  sepsis 19, ALR 17, hémodynamique 16, neuro-traumatologie 15, arrêt 15, pédiatrie 15, sédation 14,
+  obstétrique 13). Journal dans `journal/2026-09-11.md`. Chaque carte rédigée à partir du résumé
+  PubMed, relue par un agent distinct, puis `controle-cartes.mjs --tout --sources` : 0 erreur.
+  Une fois l'édition zéro publiée, `node outils/bulletin.mjs --init` a mémorisé les 162 articles
+  pour qu'aucun ne parte dans un courriel hebdomadaire.
+- 11/09/2026 — **trois défauts corrigés dans `outils/controle-cartes.mjs`**, hérités de Pause Cardio
+  et révélés par le volume : `--sources` interrogeait PubMed sans frein (au-delà de trois appels par
+  seconde PubMed coupe, et l'appel échouait en silence — sur 162 cartes, 148 recherches ratées et
+  aucune fidélité réellement contrôlée) ; la comparaison de titre sur 40 caractères acceptait un
+  homonyme, au point de juger une carte sur les chiffres d'un autre article ; et les nombres écrits
+  en toutes lettres dans les résumés anglais (« Eighty-seven randomised trials ») étaient invisibles,
+  ce qui refusait des chiffres pourtant exacts. **Ne pas retirer le frein de 350 ms.**
