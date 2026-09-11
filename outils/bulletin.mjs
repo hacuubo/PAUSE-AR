@@ -110,6 +110,7 @@ const SPECS = {
   obst:        { nom: 'Anesthésie obstétricale',                     couleur: '#1baf7a' },
   ped:         { nom: 'Anesthésie-réanimation pédiatrique',          couleur: '#eda100' },
   arret:       { nom: 'Arrêt cardiaque, urgences & pré-hospitalier', couleur: '#a8348c' },
+  sedation:    { nom: 'Sédation, delirium & après-réanimation',      couleur: '#9c5a3c' },
 };
 const NIVEAUX = {
   crit:  { nom: 'Changement de pratique probable', court: 'Changement de pratique', couleur: '#d03b3b', rang: 0 },

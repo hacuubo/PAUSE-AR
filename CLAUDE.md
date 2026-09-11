@@ -36,7 +36,7 @@ en cours d'abord, puis N−1) → articles triés par **date de parution, les de
 (décision du 29/08/2026) : insérer toute nouvelle carte en haut de son année, et lire la date dans la
 ligne `.meta` (jour facultatif, mois en toutes lettres, année). Les cartes sans mois lisible restent en
 fin d'année. Chaque surspécialité est un **tiroir replié** : au chargement, la page n'affiche que la
-liste des neuf titres avec leur nombre de sorties ; un clic sur un titre ouvre ses articles (années
+liste des dix titres avec leur nombre de sorties ; un clic sur un titre ouvre ses articles (années
 comprises), un second le referme, et **un seul tiroir est ouvert à la fois** — en ouvrir un referme le
 précédent (décision du 31/08/2026). Même exclusivité pour les fiches : déplier un article referme celui
 qui était déplié.
@@ -54,11 +54,17 @@ qui était déplié.
     polytraumatisé, transfusion massive) ;
   - `obst` (Anesthésie obstétricale) ;
   - `ped` (Anesthésie-réanimation pédiatrique) ;
-  - `arret` (Arrêt cardiaque, urgences & pré-hospitalier — réanimation cardio-pulmonaire, contrôle de la
-    température, sédation en réanimation, après-réanimation).
+  - `arret` (Arrêt cardiaque, urgences & pré-hospitalier — réanimation cardio-pulmonaire, contrôle
+    ciblé de la température, défibrillation, ECPR, prise en charge pré-hospitalière) ;
+  - `sedation` (Sédation, delirium & après-réanimation — sédation et analgésie en réanimation,
+    delirium, sommeil, mobilisation précoce, neuromyopathie de réanimation, devenir à distance et
+    syndrome post-réanimation).
+
+  Ce dixième tiroir a été détaché d'`arret` le 11/09/2026 : la sédation et l'après-réanimation
+  produisent assez d'essais pour vivre seules, et « arrêt cardiaque » gagne à ne parler que de l'arrêt.
 
   En créer une nouvelle si besoin avec sa couleur (`--series-N`), sa section, **et son entrée dans les
-  quatre tables jumelles** : `SPECS` du script en bas d'`index.html`, `SPECS` d'`outils/bulletin.mjs`,
+  cinq tables jumelles** : `SPECS` du script en bas d'`index.html`, `SPECS` d'`outils/bulletin.mjs`,
   `SPECS` d'`outils/pages-articles.mjs`, `SPECS` d'`outils/moisson.mjs`, et la liste `SPECS` d'en-tête
   d'`outils/controle-cartes.mjs`. Ne jamais en changer une sans les autres.
 - Il ne reste **que deux filtres** : les années et la recherche. Les puces de surspécialité et de niveau
@@ -296,6 +302,9 @@ Si un tracé change, corriger aussi `stroke-dasharray` / `stroke-dashoffset` de 
 `.t2` (210 aujourd'hui, la longueur approchée de chaque chemin) : c'est ce qui fait courir l'animation.
 Sous 560 px de large la marque d'en-tête passe sous le nom, centrée : côte à côte, la courbe serait
 comprimée et le plateau deviendrait illisible.
+
+Les dix surspécialités se partagent `--series-1` à `--series-10` ; le rapprochement exact figure en
+commentaire dans le bloc `:root` d'`index.html` et dans les tables `SPECS` des outils.
 
 Couleurs de marque : `--brand` (**#0d6e6b** bleu-vert profond en clair, **#3aada6** en sombre) et
 `--brand-line` pour le tracé, avec `--brand-doux`, `--brand-doux2` et `--brand-trait` qui en dérivent.
@@ -572,12 +581,12 @@ Congrès (calendrier tenu dans `outils/congres.json`, deux niveaux) :
 - **niveau 1**, couverture quotidienne et récapitulatif le lendemain de la clôture : **SFAR** (congrès
   national d'anesthésie et de réanimation), **ESAIC Euroanaesthesia**, **ESICM LIVES**.
 - **niveau 2**, repris par la veille du samedi : **ASA Anesthesiology**, **SCCM Critical Care
-  Congress**, **ISICEM** (Bruxelles), **ATS**.
+  Congress** (décision du 11/09/2026 : il reste en niveau 2), **ISICEM** (Bruxelles), **ATS**.
 
 ## Historique
 
 - 10/09/2026 — création de Pause AR à partir du dépôt terminé de Pause Cardio : même architecture,
-  mêmes outils, même chaîne qualité, même routine ; neuf surspécialités d'anesthésie-réanimation,
+  mêmes outils, même chaîne qualité, même routine ; dix surspécialités d'anesthésie-réanimation,
   nouvelles sources et nouveaux congrès, logo « pause dans la capnographie » et couleur de marque
   bleu-vert (#0d6e6b / #3aada6). Puis « édition zéro » : rattrapage 2025–2026 des essais pivots,
   recommandations et grandes méta-analyses, surspécialité par surspécialité.

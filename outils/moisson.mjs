@@ -150,8 +150,15 @@ const SPECS = {
     termes: ['cardiac arrest', 'cardiopulmonary resuscitation', 'out-of-hospital cardiac arrest',
              'targeted temperature management', 'post-cardiac arrest care', 'defibrillation',
              'extracorporeal cardiopulmonary resuscitation', 'prehospital emergency care',
-             'sedation in the intensive care unit', 'delirium critically ill',
-             'early mobilization critically ill', 'post-intensive care syndrome'],
+             'emergency medical services airway', 'in-hospital cardiac arrest'],
+  },
+  sedation: {
+    nom: 'Sédation, delirium & après-réanimation',
+    termes: ['sedation in the intensive care unit', 'dexmedetomidine', 'propofol sedation',
+             'delirium critically ill', 'analgosedation', 'sleep in the intensive care unit',
+             'early mobilization critically ill', 'post-intensive care syndrome',
+             'intensive care unit acquired weakness', 'long-term outcomes critical illness',
+             'physical restraint intensive care', 'end-of-life care intensive care'],
   },
 };
 

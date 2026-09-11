@@ -46,6 +46,7 @@ const SPECS = {
   obst:        ['#1baf7a', 'Anesthésie obstétricale'],
   ped:         ['#eda100', 'Anesthésie-réanimation pédiatrique'],
   arret:       ['#a8348c', 'Arrêt cardiaque, urgences & pré-hospitalier'],
+  sedation:    ['#9c5a3c', 'Sédation, delirium & après-réanimation'],
 };
 const MOIS = { janvier: 1, février: 2, fevrier: 2, mars: 3, avril: 4, mai: 5, juin: 6, juillet: 7, août: 8, aout: 8,
   septembre: 9, octobre: 10, novembre: 11, décembre: 12, decembre: 12 };

@@ -47,6 +47,7 @@
     --series-7: #4a3aa7; /* neuroréanimation & traumatologie */
     --series-8: #a8348c; /* arrêt cardiaque, urgences & pré-hospitalier */
     --series-9: #6b7f2e; /* sepsis & infections graves */
+    --series-10: #9c5a3c; /* sédation, delirium & après-réanimation */
     --status-critical: #d03b3b;
     --status-warning:  #fab219;
     --status-good:     #0ca30c;
@@ -77,6 +78,7 @@
       --series-7: #9085e9;
       --series-8: #c569b0;
       --series-9: #a3b95a;
+      --series-10: #c07a55;
       --brand:      #3aada6;
       --brand-line: #383835;
       --brand-doux:  rgba(58, 173, 166, .10);
@@ -704,6 +706,11 @@
   <section class="spec" data-spec="arret">
     <div class="spec-h"><span class="dot" style="background:var(--series-8)"></span><h2>Arr&ecirc;t cardiaque, urgences &amp; pr&eacute;-hospitalier</h2><span class="count">0 sorties</span></div>
   </section>
+
+  <!-- ================= SÉDATION, DELIRIUM & APRÈS-RÉANIMATION ================= -->
+  <section class="spec" data-spec="sedation">
+    <div class="spec-h"><span class="dot" style="background:var(--series-10)"></span><h2>S&eacute;dation, delirium &amp; apr&egrave;s-r&eacute;animation</h2><span class="count">0 sorties</span></div>
+  </section>
   <!-- ================= RADAR =================
        Fil chronologique. Deux sortes de lignes :
        - class="pub" : publications attendues — À REMETTRE À JOUR CHAQUE SAMEDI par la routine
@@ -781,7 +788,8 @@
     neurotrauma: ['--series-7', 'Neuroréanimation & traumatologie'],
     obst:        ['--series-3', 'Anesthésie obstétricale'],
     ped:         ['--series-4', 'Anesthésie-réanimation pédiatrique'],
-    arret:       ['--series-8', 'Arrêt cardiaque, urgences & pré-hospitalier']
+    arret:       ['--series-8', 'Arrêt cardiaque, urgences & pré-hospitalier'],
+    sedation:    ['--series-10', 'Sédation, delirium & après-réanimation']
   };
   // ---------- années affichées : l'année en cours et la précédente, rien d'autre ----------
   // Les puces d'année se fabriquent à partir de la date du jour ; les cartes plus

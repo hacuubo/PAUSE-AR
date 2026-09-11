@@ -31,7 +31,8 @@ const args   = process.argv.slice(2);
 const opt    = n => args.includes('--' + n);
 const valeur = n => (args.find(a => a.startsWith('--' + n + '=')) || '').split('=').slice(1).join('=');
 
-const SPECS   = ['periop', 'alr', 'vent', 'sepsis', 'hemo', 'neurotrauma', 'obst', 'ped', 'arret'];
+const SPECS   = ['periop', 'alr', 'vent', 'sepsis', 'hemo', 'neurotrauma', 'obst', 'ped', 'arret',
+                 'sedation'];
 const NIVEAUX = ['crit', 'warn', 'watch'];
 const MOIS    = ['janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'];
 const SIG     = 'Résumé à valider par le lecteur avant application clinique';
