@@ -1,986 +1,986 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/</loc>
+    <loc>https://pausear.fr/</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/bulletin/</loc>
+    <loc>https://pausear.fr/bulletin/</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!--FICHES:DEBUT-->
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/hypotension-prediction-index-versus-mean-arterial-pressure-alarm/</loc>
+    <loc>https://pausear.fr/fiche/hypotension-prediction-index-versus-mean-arterial-pressure-alarm/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/total-intravenous-vs-volatile-inhalational-anesthesia-for-major/</loc>
+    <loc>https://pausear.fr/fiche/total-intravenous-vs-volatile-inhalational-anesthesia-for-major/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/risk-assessment-and-prevention-of-postoperative-and-postprocedur/</loc>
+    <loc>https://pausear.fr/fiche/risk-assessment-and-prevention-of-postoperative-and-postprocedur/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/consensus-guideline-from-the-european-malignant-hyperthermia-gro/</loc>
+    <loc>https://pausear.fr/fiche/consensus-guideline-from-the-european-malignant-hyperthermia-gro/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/high-versus-standard-blood-pressure-target-in-hypertensive-high/</loc>
+    <loc>https://pausear.fr/fiche/high-versus-standard-blood-pressure-target-in-hypertensive-high/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/perioperative-intravenous-fluid-and-chronic-kidney-disease-long/</loc>
+    <loc>https://pausear.fr/fiche/perioperative-intravenous-fluid-and-chronic-kidney-disease-long/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/sugammadex-versus-neostigmine-for-reversal-of-neuromuscular-bloc/</loc>
+    <loc>https://pausear.fr/fiche/sugammadex-versus-neostigmine-for-reversal-of-neuromuscular-bloc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/intraoperative-driving-pressure-guided-high-peep-vs-standard-low/</loc>
+    <loc>https://pausear.fr/fiche/intraoperative-driving-pressure-guided-high-peep-vs-standard-low/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/measurement-and-management-of-adult-blood-pressure-in-the-peri-o/</loc>
+    <loc>https://pausear.fr/fiche/measurement-and-management-of-adult-blood-pressure-in-the-peri-o/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/peri-operative-risk-of-non-cardiac-surgery-in-patients-with-aort/</loc>
+    <loc>https://pausear.fr/fiche/peri-operative-risk-of-non-cardiac-surgery-in-patients-with-aort/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/proactive-vs-reactive-treatment-of-hypotension-during-surgery-th/</loc>
+    <loc>https://pausear.fr/fiche/proactive-vs-reactive-treatment-of-hypotension-during-surgery-th/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/individualized-perioperative-blood-pressure-management-in-patien/</loc>
+    <loc>https://pausear.fr/fiche/individualized-perioperative-blood-pressure-management-in-patien/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effects-of-intraoperative-higher-versus-lower-positive-end-expir/</loc>
+    <loc>https://pausear.fr/fiche/effects-of-intraoperative-higher-versus-lower-positive-end-expir/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/perioperative-hemodynamic-optimization-adults-including-obstetri/</loc>
+    <loc>https://pausear.fr/fiche/perioperative-hemodynamic-optimization-adults-including-obstetri/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/safety-and-efficacy-of-6-hydroxyethyl-starch-in-patients-undergo/</loc>
+    <loc>https://pausear.fr/fiche/safety-and-efficacy-of-6-hydroxyethyl-starch-in-patients-undergo/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/continuous-vital-sign-monitoring-at-the-surgical-ward-for-improv/</loc>
+    <loc>https://pausear.fr/fiche/continuous-vital-sign-monitoring-at-the-surgical-ward-for-improv/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/relative-efficacy-of-prehabilitation-interventions-and-their-com/</loc>
+    <loc>https://pausear.fr/fiche/relative-efficacy-of-prehabilitation-interventions-and-their-com/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/elective-peri-operative-management-of-adults-taking-glucagon-lik/</loc>
+    <loc>https://pausear.fr/fiche/elective-peri-operative-management-of-adults-taking-glucagon-lik/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/phase-2b-trial-of-a-nav1-8-inhibitor-for-acute-pain/</loc>
+    <loc>https://pausear.fr/fiche/phase-2b-trial-of-a-nav1-8-inhibitor-for-acute-pain/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/regional-anaesthesia-and-chronic-postsurgical-pain-a-systematic/</loc>
+    <loc>https://pausear.fr/fiche/regional-anaesthesia-and-chronic-postsurgical-pain-a-systematic/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/use-and-safety-of-corticosteroid-injections-in-joints-and-muscul/</loc>
+    <loc>https://pausear.fr/fiche/use-and-safety-of-corticosteroid-injections-in-joints-and-muscul/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prophylactic-interventions-to-prevent-rebound-pain-after-periphe/</loc>
+    <loc>https://pausear.fr/fiche/prophylactic-interventions-to-prevent-rebound-pain-after-periphe/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/opioid-free-vs-opioid-inclusive-anaesthesia-with-or-without-regi/</loc>
+    <loc>https://pausear.fr/fiche/opioid-free-vs-opioid-inclusive-anaesthesia-with-or-without-regi/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/eliminating-opioid-prescriptions-from-outpatient-minimally-invas/</loc>
+    <loc>https://pausear.fr/fiche/eliminating-opioid-prescriptions-from-outpatient-minimally-invas/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/single-shot-perineural-femoral-nerve-block-and-falls-after-lower/</loc>
+    <loc>https://pausear.fr/fiche/single-shot-perineural-femoral-nerve-block-and-falls-after-lower/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/transversus-abdominis-plane-block-for-postoperative-pain-managem/</loc>
+    <loc>https://pausear.fr/fiche/transversus-abdominis-plane-block-for-postoperative-pain-managem/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/cryoanalgesia-increases-neuropathic-pain-in-adults-undergoing-mi/</loc>
+    <loc>https://pausear.fr/fiche/cryoanalgesia-increases-neuropathic-pain-in-adults-undergoing-mi/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/dexmedetomidine-for-analgesia-in-nonintubated-patients-with-trau/</loc>
+    <loc>https://pausear.fr/fiche/dexmedetomidine-for-analgesia-in-nonintubated-patients-with-trau/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/intercostal-or-paravertebral-block-vs-thoracic-epidural-in-lung/</loc>
+    <loc>https://pausear.fr/fiche/intercostal-or-paravertebral-block-vs-thoracic-epidural-in-lung/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/comparing-the-pericapsular-nerve-group-block-and-fascia-iliaca-b/</loc>
+    <loc>https://pausear.fr/fiche/comparing-the-pericapsular-nerve-group-block-and-fascia-iliaca-b/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/erector-spinae-plane-block-versus-paravertebral-block-for-major/</loc>
+    <loc>https://pausear.fr/fiche/erector-spinae-plane-block-versus-paravertebral-block-for-major/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/gabapentin-for-pain-management-after-major-surgery-a-placebo-con/</loc>
+    <loc>https://pausear.fr/fiche/gabapentin-for-pain-management-after-major-surgery-a-placebo-con/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/regional-anaesthesia-modalities-for-primary-total-hip-arthroplas/</loc>
+    <loc>https://pausear.fr/fiche/regional-anaesthesia-modalities-for-primary-total-hip-arthroplas/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/exploring-the-additive-or-synergistic-effects-of-the-systemic-an/</loc>
+    <loc>https://pausear.fr/fiche/exploring-the-additive-or-synergistic-effects-of-the-systemic-an/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/commonly-used-interventional-procedures-for-non-cancer-chronic-s/</loc>
+    <loc>https://pausear.fr/fiche/commonly-used-interventional-procedures-for-non-cancer-chronic-s/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/noninvasive-respiratory-support-for-adult-patients-with-acute-re/</loc>
+    <loc>https://pausear.fr/fiche/noninvasive-respiratory-support-for-adult-patients-with-acute-re/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/standard-dose-unfractionated-heparin-versus-low-dose-unfractiona/</loc>
+    <loc>https://pausear.fr/fiche/standard-dose-unfractionated-heparin-versus-low-dose-unfractiona/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/carbocisteine-or-hypertonic-saline-for-acute-respiratory-failure/</loc>
+    <loc>https://pausear.fr/fiche/carbocisteine-or-hypertonic-saline-for-acute-respiratory-failure/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-a-lower-vs-higher-positive-end-expiratory-pressure-str/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-a-lower-vs-higher-positive-end-expiratory-pressure-str/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/high-flow-or-standard-oxygen-in-acute-hypoxemic-respiratory-fail/</loc>
+    <loc>https://pausear.fr/fiche/high-flow-or-standard-oxygen-in-acute-hypoxemic-respiratory-fail/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-automated-closed-loop-ventilation-vs-protocolized-conv/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-automated-closed-loop-ventilation-vs-protocolized-conv/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-driving-pressure-limiting-strategies-on-outcomes-of-pa/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-driving-pressure-limiting-strategies-on-outcomes-of-pa/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/oxygenation-targets-and-long-term-cognitive-and-pulmonary-functi/</loc>
+    <loc>https://pausear.fr/fiche/oxygenation-targets-and-long-term-cognitive-and-pulmonary-functi/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/ketamine-or-etomidate-for-tracheal-intubation-of-critically-ill/</loc>
+    <loc>https://pausear.fr/fiche/ketamine-or-etomidate-for-tracheal-intubation-of-critically-ill/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/difficult-airway-society-2025-guidelines-for-management-of-unant/</loc>
+    <loc>https://pausear.fr/fiche/difficult-airway-society-2025-guidelines-for-management-of-unant/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effectiveness-and-safety-of-prolonged-prone-positioning-in-adult/</loc>
+    <loc>https://pausear.fr/fiche/effectiveness-and-safety-of-prolonged-prone-positioning-in-adult/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/selective-decontamination-of-the-digestive-tract-during-ventilat/</loc>
+    <loc>https://pausear.fr/fiche/selective-decontamination-of-the-digestive-tract-during-ventilat/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/british-societies-guideline-on-the-management-of-emergencies-in/</loc>
+    <loc>https://pausear.fr/fiche/british-societies-guideline-on-the-management-of-emergencies-in/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/conservative-oxygen-therapy-in-mechanically-ventilated-criticall/</loc>
+    <loc>https://pausear.fr/fiche/conservative-oxygen-therapy-in-mechanically-ventilated-criticall/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/treatment-with-allogeneic-mesenchymal-stromal-cells-for-moderate/</loc>
+    <loc>https://pausear.fr/fiche/treatment-with-allogeneic-mesenchymal-stromal-cells-for-moderate/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/proportional-assist-ventilation-for-minimizing-the-duration-of-m/</loc>
+    <loc>https://pausear.fr/fiche/proportional-assist-ventilation-for-minimizing-the-duration-of-m/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/temporary-transvenous-diaphragm-neurostimulation-for-weaning-fro/</loc>
+    <loc>https://pausear.fr/fiche/temporary-transvenous-diaphragm-neurostimulation-for-weaning-fro/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/inhaled-sedation-in-acute-respiratory-distress-syndrome-the-sesa/</loc>
+    <loc>https://pausear.fr/fiche/inhaled-sedation-in-acute-respiratory-distress-syndrome-the-sesa/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/preoxygenation-strategies-for-intubation-of-patients-who-are-cri/</loc>
+    <loc>https://pausear.fr/fiche/preoxygenation-strategies-for-intubation-of-patients-who-are-cri/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/videolaryngoscope-designs-for-tracheal-intubation-in-adults-a-sy/</loc>
+    <loc>https://pausear.fr/fiche/videolaryngoscope-designs-for-tracheal-intubation-in-adults-a-sy/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/mortality-effect-of-albumin-fluid-resuscitation-in-adults-with-s/</loc>
+    <loc>https://pausear.fr/fiche/mortality-effect-of-albumin-fluid-resuscitation-in-adults-with-s/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effects-of-an-early-restrictive-versus-liberal-fluid-strategy-on/</loc>
+    <loc>https://pausear.fr/fiche/effects-of-an-early-restrictive-versus-liberal-fluid-strategy-on/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/4-tetrasodium-edta-to-prevent-central-venous-access-device-assoc/</loc>
+    <loc>https://pausear.fr/fiche/4-tetrasodium-edta-to-prevent-central-venous-access-device-assoc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/vasopressors-or-fluids-in-early-septic-shock/</loc>
+    <loc>https://pausear.fr/fiche/vasopressors-or-fluids-in-early-septic-shock/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/ha-330-hemoadsorption-in-septic-shock-requiring-high-dose-norepi/</loc>
+    <loc>https://pausear.fr/fiche/ha-330-hemoadsorption-in-septic-shock-requiring-high-dose-norepi/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/the-lancet-commission-on-sepsis-transforming-sepsis-care-and-out/</loc>
+    <loc>https://pausear.fr/fiche/the-lancet-commission-on-sepsis-transforming-sepsis-care-and-out/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/clinical-criteria-for-the-definition-of-refractory-septic-shock/</loc>
+    <loc>https://pausear.fr/fiche/clinical-criteria-for-the-definition-of-refractory-septic-shock/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/surviving-sepsis-campaign-international-guidelines-for-managemen/</loc>
+    <loc>https://pausear.fr/fiche/surviving-sepsis-campaign-international-guidelines-for-managemen/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/polymyxin-b-haemoadsorption-in-endotoxic-septic-shock-tigris-a-m/</loc>
+    <loc>https://pausear.fr/fiche/polymyxin-b-haemoadsorption-in-endotoxic-septic-shock-tigris-a-m/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/procalcitonin-testing-combined-with-news2-evaluation-compared-wi/</loc>
+    <loc>https://pausear.fr/fiche/procalcitonin-testing-combined-with-news2-evaluation-compared-wi/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/inhaled-antibiotics-to-treat-ventilator-associated-pneumonia-a-s/</loc>
+    <loc>https://pausear.fr/fiche/inhaled-antibiotics-to-treat-ventilator-associated-pneumonia-a-s/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/precision-immunotherapy-to-improve-sepsis-outcomes-the-immunosep/</loc>
+    <loc>https://pausear.fr/fiche/precision-immunotherapy-to-improve-sepsis-outcomes-the-immunosep/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/necrotizing-soft-tissue-infections-survival-guide-in-adult-patie/</loc>
+    <loc>https://pausear.fr/fiche/necrotizing-soft-tissue-infections-survival-guide-in-adult-patie/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/personalized-hemodynamic-resuscitation-targeting-capillary-refil/</loc>
+    <loc>https://pausear.fr/fiche/personalized-hemodynamic-resuscitation-targeting-capillary-refil/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/targeted-tissue-perfusion-versus-macrocirculatory-guided-standar/</loc>
+    <loc>https://pausear.fr/fiche/targeted-tissue-perfusion-versus-macrocirculatory-guided-standar/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/cefiderocol-versus-standard-therapy-for-hospital-acquired-and-he/</loc>
+    <loc>https://pausear.fr/fiche/cefiderocol-versus-standard-therapy-for-hospital-acquired-and-he/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/combined-use-of-a-multiplex-pcr-and-serum-procalcitonin-to-reduc/</loc>
+    <loc>https://pausear.fr/fiche/combined-use-of-a-multiplex-pcr-and-serum-procalcitonin-to-reduc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/efficacy-of-targeting-high-mean-arterial-pressure-for-older-pati/</loc>
+    <loc>https://pausear.fr/fiche/efficacy-of-targeting-high-mean-arterial-pressure-for-older-pati/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/the-efficacy-and-safety-of-thymosin-1-for-sepsis-tests-multicent/</loc>
+    <loc>https://pausear.fr/fiche/the-efficacy-and-safety-of-thymosin-1-for-sepsis-tests-multicent/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/early-red-blood-cell-transfusion-strategy-in-septic-shock-among/</loc>
+    <loc>https://pausear.fr/fiche/early-red-blood-cell-transfusion-strategy-in-septic-shock-among/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/cold-and-room-temperature-platelets-in-cardiac-surgery-the-chips/</loc>
+    <loc>https://pausear.fr/fiche/cold-and-room-temperature-platelets-in-cardiac-surgery-the-chips/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/hospital-policy-of-tranexamic-acid-to-reduce-transfusion-in-majo/</loc>
+    <loc>https://pausear.fr/fiche/hospital-policy-of-tranexamic-acid-to-reduce-transfusion-in-majo/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prehospital-resuscitation-with-type-o-whole-blood-for-trauma-and/</loc>
+    <loc>https://pausear.fr/fiche/prehospital-resuscitation-with-type-o-whole-blood-for-trauma-and/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/levosimendan-to-facilitate-weaning-from-ecmo-in-patients-with-se/</loc>
+    <loc>https://pausear.fr/fiche/levosimendan-to-facilitate-weaning-from-ecmo-in-patients-with-se/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/liberal-or-restrictive-postoperative-transfusion-in-patients-at/</loc>
+    <loc>https://pausear.fr/fiche/liberal-or-restrictive-postoperative-transfusion-in-patients-at/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/mortality-effect-of-higher-versus-lower-blood-pressure-targets-i/</loc>
+    <loc>https://pausear.fr/fiche/mortality-effect-of-higher-versus-lower-blood-pressure-targets-i/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/esicm-guidelines-on-circulatory-shock-and-hemodynamic-monitoring/</loc>
+    <loc>https://pausear.fr/fiche/esicm-guidelines-on-circulatory-shock-and-hemodynamic-monitoring/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/a-preventive-care-strategy-to-reduce-moderate-or-severe-acute-ki/</loc>
+    <loc>https://pausear.fr/fiche/a-preventive-care-strategy-to-reduce-moderate-or-severe-acute-ki/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/platelet-transfusion-2025-aabb-and-ictmg-international-clinical/</loc>
+    <loc>https://pausear.fr/fiche/platelet-transfusion-2025-aabb-and-ictmg-international-clinical/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-society-of-intensive-care-medicine-clinical-practice-gu/</loc>
+    <loc>https://pausear.fr/fiche/european-society-of-intensive-care-medicine-clinical-practice-gu/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/early-use-of-norepinephrine-in-high-risk-patients-undergoing-maj/</loc>
+    <loc>https://pausear.fr/fiche/early-use-of-norepinephrine-in-high-risk-patients-undergoing-maj/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prothrombin-complex-concentrate-vs-frozen-plasma-for-coagulopath/</loc>
+    <loc>https://pausear.fr/fiche/prothrombin-complex-concentrate-vs-frozen-plasma-for-coagulopath/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-society-of-intensive-care-medicine-esicm-2025-clinical/</loc>
+    <loc>https://pausear.fr/fiche/european-society-of-intensive-care-medicine-esicm-2025-clinical/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/transfusion-of-fresh-frozen-plasma-and-platelets-in-critically-i/</loc>
+    <loc>https://pausear.fr/fiche/transfusion-of-fresh-frozen-plasma-and-platelets-in-critically-i/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/association-of-anaesthetists-guidelines-the-use-of-blood-compone/</loc>
+    <loc>https://pausear.fr/fiche/association-of-anaesthetists-guidelines-the-use-of-blood-compone/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/early-inhaled-isoflurane-sedation-in-neurocritical-patients-with/</loc>
+    <loc>https://pausear.fr/fiche/early-inhaled-isoflurane-sedation-in-neurocritical-patients-with/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prehospital-tranexamic-acid-bolus-improves-outcomes-in-traumatic/</loc>
+    <loc>https://pausear.fr/fiche/prehospital-tranexamic-acid-bolus-improves-outcomes-in-traumatic/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/guidelines-for-neuroprognostication-in-critically-ill-adults-wit/</loc>
+    <loc>https://pausear.fr/fiche/guidelines-for-neuroprognostication-in-critically-ill-adults-wit/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prehospital-whole-blood-in-traumatic-hemorrhage-a-randomized-con/</loc>
+    <loc>https://pausear.fr/fiche/prehospital-whole-blood-in-traumatic-hemorrhage-a-randomized-con/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/influence-of-multiple-trauma-on-the-effect-of-transfusion-strate/</loc>
+    <loc>https://pausear.fr/fiche/influence-of-multiple-trauma-on-the-effect-of-transfusion-strate/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/should-platelet-transfusion-be-used-to-reverse-preinjury-antipla/</loc>
+    <loc>https://pausear.fr/fiche/should-platelet-transfusion-be-used-to-reverse-preinjury-antipla/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/executive-summary-of-the-brain-trauma-foundation-guidelines-for/</loc>
+    <loc>https://pausear.fr/fiche/executive-summary-of-the-brain-trauma-foundation-guidelines-for/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/guidelines-for-neuroprognostication-in-critically-ill-adults-wit-2/</loc>
+    <loc>https://pausear.fr/fiche/guidelines-for-neuroprognostication-in-critically-ill-adults-wit-2/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/early-versus-late-initiation-of-chemical-venous-thromboembolism/</loc>
+    <loc>https://pausear.fr/fiche/early-versus-late-initiation-of-chemical-venous-thromboembolism/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/tranexamic-acid-timing-and-mortality-impact-after-trauma/</loc>
+    <loc>https://pausear.fr/fiche/tranexamic-acid-timing-and-mortality-impact-after-trauma/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/use-of-extracorporeal-membrane-oxygenation-in-adult-trauma-patie/</loc>
+    <loc>https://pausear.fr/fiche/use-of-extracorporeal-membrane-oxygenation-in-adult-trauma-patie/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/neurological-outcomes-and-mortality-following-hyperoxemia-in-adu/</loc>
+    <loc>https://pausear.fr/fiche/neurological-outcomes-and-mortality-following-hyperoxemia-in-adu/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/liberal-vs-restrictive-transfusion-strategies-for-acute-brain-in/</loc>
+    <loc>https://pausear.fr/fiche/liberal-vs-restrictive-transfusion-strategies-for-acute-brain-in/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-early-administration-of-fibrinogen-replacement-therapy/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-early-administration-of-fibrinogen-replacement-therapy/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/early-cold-stored-platelet-transfusion-following-traumatic-brain/</loc>
+    <loc>https://pausear.fr/fiche/early-cold-stored-platelet-transfusion-following-traumatic-brain/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prophylactic-tranexamic-acid-for-the-prevention-of-postpartum-ha/</loc>
+    <loc>https://pausear.fr/fiche/prophylactic-tranexamic-acid-for-the-prevention-of-postpartum-ha/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/remifentanil-patient-controlled-analgesia-for-labour-analgesia-g/</loc>
+    <loc>https://pausear.fr/fiche/remifentanil-patient-controlled-analgesia-for-labour-analgesia-g/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/the-impact-of-neuraxial-labour-analgesia-on-neurodevelopmental-d/</loc>
+    <loc>https://pausear.fr/fiche/the-impact-of-neuraxial-labour-analgesia-on-neurodevelopmental-d/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/proactive-haemodynamic-management-using-the-hypotension-predicti/</loc>
+    <loc>https://pausear.fr/fiche/proactive-haemodynamic-management-using-the-hypotension-predicti/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/a-multicomponent-intervention-to-improve-maternal-infection-outc/</loc>
+    <loc>https://pausear.fr/fiche/a-multicomponent-intervention-to-improve-maternal-infection-outc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prognostic-accuracy-of-clinical-markers-of-postpartum-bleeding-i/</loc>
+    <loc>https://pausear.fr/fiche/prognostic-accuracy-of-clinical-markers-of-postpartum-bleeding-i/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prophylactic-oxytocin-dose-following-vaginal-birth-to-prevent-po/</loc>
+    <loc>https://pausear.fr/fiche/prophylactic-oxytocin-dose-following-vaginal-birth-to-prevent-po/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-prophylactic-intravenous-calcium-gluconate-on-uterine/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-prophylactic-intravenous-calcium-gluconate-on-uterine/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/guidelines-for-antenatal-and-preoperative-care-in-cesarean-deliv/</loc>
+    <loc>https://pausear.fr/fiche/guidelines-for-antenatal-and-preoperative-care-in-cesarean-deliv/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/guidelines-for-postoperative-care-in-cesarean-delivery-enhanced/</loc>
+    <loc>https://pausear.fr/fiche/guidelines-for-postoperative-care-in-cesarean-delivery-enhanced/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/guidelines-for-intraoperative-care-in-cesarean-delivery-enhanced/</loc>
+    <loc>https://pausear.fr/fiche/guidelines-for-intraoperative-care-in-cesarean-delivery-enhanced/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/causes-of-and-risk-factors-for-postpartum-haemorrhage-a-systemat/</loc>
+    <loc>https://pausear.fr/fiche/causes-of-and-risk-factors-for-postpartum-haemorrhage-a-systemat/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/epidural-analgesia-versus-dural-puncture-epidural-analgesia-in-l/</loc>
+    <loc>https://pausear.fr/fiche/epidural-analgesia-versus-dural-puncture-epidural-analgesia-in-l/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/gastric-residual-volume-assessment-in-critically-ill-children-th/</loc>
+    <loc>https://pausear.fr/fiche/gastric-residual-volume-assessment-in-critically-ill-children-th/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/off-label-medicine-use-in-pediatric-anesthesia-recommendations-o/</loc>
+    <loc>https://pausear.fr/fiche/off-label-medicine-use-in-pediatric-anesthesia-recommendations-o/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/paravertebral-analgesia-versus-wound-infiltration-in-children-re/</loc>
+    <loc>https://pausear.fr/fiche/paravertebral-analgesia-versus-wound-infiltration-in-children-re/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/balanced-fluid-or-0-9-saline-in-children-treated-for-septic-shoc/</loc>
+    <loc>https://pausear.fr/fiche/balanced-fluid-or-0-9-saline-in-children-treated-for-septic-shoc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/endotracheal-surfactant-for-infants-with-life-threatening-bronch/</loc>
+    <loc>https://pausear.fr/fiche/endotracheal-surfactant-for-infants-with-life-threatening-bronch/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-adjunctive-train-of-four-monitoring-using-peripheral-n/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-adjunctive-train-of-four-monitoring-using-peripheral-n/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/platelet-transfusion-thresholds-for-children-supported-by-extrac/</loc>
+    <loc>https://pausear.fr/fiche/platelet-transfusion-thresholds-for-children-supported-by-extrac/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/impact-of-preoperative-fasting-duration-on-perioperative-complic/</loc>
+    <loc>https://pausear.fr/fiche/impact-of-preoperative-fasting-duration-on-perioperative-complic/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-neuromuscular-blocking-agents-on-tracheal-intubation-q/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-neuromuscular-blocking-agents-on-tracheal-intubation-q/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/videolaryngoscopy-versus-direct-laryngoscopy-for-paediatric-trac/</loc>
+    <loc>https://pausear.fr/fiche/videolaryngoscopy-versus-direct-laryngoscopy-for-paediatric-trac/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/early-enteral-nutrition-and-clinical-outcomes-in-critically-ill/</loc>
+    <loc>https://pausear.fr/fiche/early-enteral-nutrition-and-clinical-outcomes-in-critically-ill/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/fifth-centile-versus-50th-centile-mean-blood-pressure-targets-in/</loc>
+    <loc>https://pausear.fr/fiche/fifth-centile-versus-50th-centile-mean-blood-pressure-targets-in/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/inhaled-isoflurane-for-sedation-of-mechanically-ventilated-child/</loc>
+    <loc>https://pausear.fr/fiche/inhaled-isoflurane-for-sedation-of-mechanically-ventilated-child/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/oxygen-supplementation-in-pediatric-sedation-prospective-multice/</loc>
+    <loc>https://pausear.fr/fiche/oxygen-supplementation-in-pediatric-sedation-prospective-multice/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effectiveness-of-nasal-high-flow-oxygen-during-apnoea-on-hypoxae/</loc>
+    <loc>https://pausear.fr/fiche/effectiveness-of-nasal-high-flow-oxygen-during-apnoea-on-hypoxae/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/sodium-bicarbonate-for-in-hospital-cardiac-arrest-a-randomized-c/</loc>
+    <loc>https://pausear.fr/fiche/sodium-bicarbonate-for-in-hospital-cardiac-arrest-a-randomized-c/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prehospital-resuscitative-endovascular-balloon-occlusion-of-the/</loc>
+    <loc>https://pausear.fr/fiche/prehospital-resuscitative-endovascular-balloon-occlusion-of-the/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-vascular-access-strategy-on-long-term-outcomes-in-pati/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-vascular-access-strategy-on-long-term-outcomes-in-pati/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-guidelines-2025-ethics-in-resusci/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-guidelines-2025-ethics-in-resusci/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-guidelines-2025-special-circumsta/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-guidelines-2025-special-circumsta/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-guidelines-2025-paediatric-life-s/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-guidelines-2025-paediatric-life-s/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-guidelines-2025-adult-advanced-li/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-guidelines-2025-adult-advanced-li/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-guidelines-2025-executive-summary/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-guidelines-2025-executive-summary/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-guidelines-2025-adult-basic-life/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-guidelines-2025-adult-basic-life/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/european-resuscitation-council-and-european-society-of-intensive/</loc>
+    <loc>https://pausear.fr/fiche/european-resuscitation-council-and-european-society-of-intensive/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/expedited-transfer-from-the-scene-for-refractory-out-of-hospital/</loc>
+    <loc>https://pausear.fr/fiche/expedited-transfer-from-the-scene-for-refractory-out-of-hospital/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/long-term-functional-outcome-and-quality-of-life-5-8-years-after/</loc>
+    <loc>https://pausear.fr/fiche/long-term-functional-outcome-and-quality-of-life-5-8-years-after/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/oxygen-and-carbon-dioxide-targets-after-cardiac-arrest-an-update/</loc>
+    <loc>https://pausear.fr/fiche/oxygen-and-carbon-dioxide-targets-after-cardiac-arrest-an-update/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/intraosseous-versus-intravenous-vascular-access-in-out-of-hospit/</loc>
+    <loc>https://pausear.fr/fiche/intraosseous-versus-intravenous-vascular-access-in-out-of-hospit/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prehospital-management-of-adults-with-traumatic-out-of-hospital/</loc>
+    <loc>https://pausear.fr/fiche/prehospital-management-of-adults-with-traumatic-out-of-hospital/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/icu-specific-virtual-reality-for-mental-health-after-critical-il/</loc>
+    <loc>https://pausear.fr/fiche/icu-specific-virtual-reality-for-mental-health-after-critical-il/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/the-ficus-cluster-randomized-controlled-trial-of-a-family-suppor/</loc>
+    <loc>https://pausear.fr/fiche/the-ficus-cluster-randomized-controlled-trial-of-a-family-suppor/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effectiveness-of-drug-interventions-to-prevent-delirium-after-su/</loc>
+    <loc>https://pausear.fr/fiche/effectiveness-of-drug-interventions-to-prevent-delirium-after-su/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effects-of-dexmedetomidine-on-outcomes-after-cardiac-surgery-doc/</loc>
+    <loc>https://pausear.fr/fiche/effects-of-dexmedetomidine-on-outcomes-after-cardiac-surgery-doc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/dexmedetomidine-for-treatment-of-hyperactive-delirium-in-non-int/</loc>
+    <loc>https://pausear.fr/fiche/dexmedetomidine-for-treatment-of-hyperactive-delirium-in-non-int/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/a-randomized-controlled-trial-of-a-post-icu-telehealth-care-mode/</loc>
+    <loc>https://pausear.fr/fiche/a-randomized-controlled-trial-of-a-post-icu-telehealth-care-mode/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/functional-status-after-delirium-in-the-icu-a-1-year-follow-up-o/</loc>
+    <loc>https://pausear.fr/fiche/functional-status-after-delirium-in-the-icu-a-1-year-follow-up-o/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/effect-of-enhanced-versus-usual-mobilization-activities-in-criti/</loc>
+    <loc>https://pausear.fr/fiche/effect-of-enhanced-versus-usual-mobilization-activities-in-criti/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/dexmedetomidine-or-clonidine-based-sedation-compared-with-propof/</loc>
+    <loc>https://pausear.fr/fiche/dexmedetomidine-or-clonidine-based-sedation-compared-with-propof/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/improving-recovery-and-outcomes-every-day-after-the-icu-improve/</loc>
+    <loc>https://pausear.fr/fiche/improving-recovery-and-outcomes-every-day-after-the-icu-improve/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/a-randomized-trial-of-shared-decision-making-in-code-status-disc/</loc>
+    <loc>https://pausear.fr/fiche/a-randomized-trial-of-shared-decision-making-in-code-status-disc/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/a-focused-update-to-the-clinical-practice-guidelines-for-the-pre/</loc>
+    <loc>https://pausear.fr/fiche/a-focused-update-to-the-clinical-practice-guidelines-for-the-pre/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/remimazolam-for-procedural-sedation-a-systematic-review-with-met/</loc>
+    <loc>https://pausear.fr/fiche/remimazolam-for-procedural-sedation-a-systematic-review-with-met/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hacuubo.github.io/PAUSE-AR/fiche/prolonged-mechanical-ventilation-in-critically-ill-patients-six/</loc>
+    <loc>https://pausear.fr/fiche/prolonged-mechanical-ventilation-in-critically-ill-patients-six/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

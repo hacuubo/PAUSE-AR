@@ -3,8 +3,9 @@
 Le projet s'appelle **Pause AR**, descriptif : *« Chaque semaine, l'essentiel des publications qui
 comptent en anesthésie-réanimation : essais pivots, recommandations et grandes méta-analyses. »*
 Le fichier principal est **`index.html`**, publié automatiquement par GitHub Pages sur
-**https://hacuubo.github.io/PAUSE-AR/** (un nom de domaine propre est prévu ; le dépôt garde le nom
-`pause-ar`). C'est un tableau de bord de veille scientifique en anesthésie-réanimation.
+**https://pausear.fr/** (nom de domaine OVH branché le 11/09/2026 ; `www.pausear.fr` y renvoie ; le
+dépôt garde le nom `PAUSE-AR`). C'est un tableau de bord de veille scientifique en
+anesthésie-réanimation.
 
 **Origine (10/09/2026)** : Pause AR est la copie conforme de **Pause Cardio**
 (dépôt `hacuubo/veille-cardio`, https://pausecardio.fr), projet terminé de veille en cardiologie.
@@ -269,7 +270,7 @@ Autres règles de mise en page :
 - **Bouton « Partager »** (règle du 08/09/2026) : posé par le script en fin de rangée `.actions` de
   chaque fiche, jamais écrit dans le HTML des cartes. Sur téléphone il ouvre la feuille de partage du
   système (WhatsApp, SMS, mail) avec le titre d'origine, l'accroche française et le lien direct
-  `https://hacuubo.github.io/PAUSE-AR/#ancre` (constante `SITE_URL` du script, la même adresse que dans
+  `https://pausear.fr/#ancre` (constante `SITE_URL` du script, la même adresse que dans
   les courriels) ; ailleurs il copie le lien et affiche « Lien copié » (`#toast`).
 - **Tiroirs de surspécialité** : la tête de section (`.spec-h`) est cliquable (chevron à droite, `role`
   et `aria-expanded` posés par le script) ; l'état ouvert est porté par `section.spec.ouvert` et par
@@ -328,18 +329,18 @@ affiche la vignette de secours d'iOS (fond noir, lettre blanche). `manifest.webm
 donne le nom « Pause AR » à l'icône posée sur l'écran d'accueil. Ne pas mettre l'icône arrondie dans
 l'`apple-touch-icon` : les coins apparaîtraient deux fois.
 
-**Attention au chemin dans le manifeste** : tant que le site vit sur GitHub Pages, `start_url`, `scope`
-et les `src` des icônes doivent commencer par `/PAUSE-AR/`. Le jour où un nom de domaine propre est
-branché (avec un `CNAME`), les remettre à `/`.
+**Chemin dans le manifeste** : le site vit à la **racine** de `pausear.fr` depuis le 11/09/2026 —
+`start_url`, `scope` et les `src` des icônes commencent donc par `/`, et le fichier `CNAME` à la racine
+du dépôt (contenu : `pausear.fr`) est ce qui tient le nom de domaine. **Ne jamais le supprimer** : sans
+lui, GitHub Pages relâche le domaine au prochain déploiement et le site retombe sur `github.io`.
 
-**Majuscules de l'adresse** (constaté le 11/09/2026) : le dépôt s'appelle `PAUSE-AR` et **GitHub Pages
-distingue les majuscules des minuscules** dans le chemin — `hacuubo.github.io/PAUSE-AR/` répond,
-`hacuubo.github.io/pause-ar/` renvoie 404. Le site avait été écrit en minuscules partout : icônes du
-manifeste, `SITE_URL` du bouton « Partager », liens des courriels, `canonical` des pages par article et
-`sitemap.xml` pointaient tous dans le vide, alors que la page d'accueil s'affichait normalement — d'où
-un défaut invisible à l'œil. Écrire l'adresse **exactement** `https://hacuubo.github.io/PAUSE-AR/`
-partout, et la vérifier d'un `curl` sur une icône, pas seulement sur la page d'accueil. Le branchement
-du nom de domaine propre fera disparaître la question : le site vivra à la racine.
+**Leçon gardée de la période `github.io`** (11/09/2026) : GitHub Pages **distinguait les majuscules
+des minuscules** dans le chemin, le dépôt s'appelle `PAUSE-AR` et le site avait été écrit en
+minuscules partout — icônes du manifeste, `SITE_URL` du bouton « Partager », liens des courriels,
+`canonical` des pages par article et `sitemap.xml` pointaient tous vers un 404, alors que la page
+d'accueil s'affichait normalement. Défaut invisible à l'œil. La règle qui en reste, valable pour
+tout changement d'adresse : **vérifier une icône et une page d'article, pas seulement la page
+d'accueil** (`curl -o /dev/null -w '%{http_code}'`).
 
 `icone/partage.png` (1200 × 630) est l'image de partage sur les réseaux sociaux et les messageries
 (`og:image`, `twitter:image`) : fond encre, logo, nom et devise. La refabriquer si le logo change.
@@ -420,7 +421,7 @@ Règles de classement qui évitent les oublis :
   statique par article (titre d'origine, accroche, résumé, résultat principal, « En pratique », fiche
   complète, liens ; description, canonical, Open Graph et JSON-LD pour Google) et tient le bloc
   `<!--FICHES:DEBUT-->…<!--FICHES:FIN-->` de `sitemap.xml`. Ces pages ne servent qu'à être trouvées :
-  chacune renvoie vers le site principal, à la carte (`https://hacuubo.github.io/PAUSE-AR/#ancre`), et
+  chacune renvoie vers le site principal, à la carte (`https://pausear.fr/#ancre`), et
   **le bouton « Partager » du site continue de pointer vers le site principal, pas vers la page par
   article**. L'ancre est la même que celle du script d'`index.html` et de
   `outils/bulletin.mjs` : trois endroits à ne jamais changer isolément. **La routine lance le script
@@ -470,7 +471,7 @@ ajouté — de quoi être lu en deux minutes ou transféré à des collègues.
 - Une seule commande, à lancer depuis la racine du dépôt : `bash outils/faire-bulletin.sh`
 - La même commande écrit aussi **`bulletin/courriel-AAAA-MM-JJ.html`** : le bulletin en version
   e-mail (tableaux, styles en ligne), où chaque titre renvoie vers sa fiche sur
-  `https://hacuubo.github.io/PAUSE-AR/#ancre-de-l-article`. C'est **la voie principale d'envoi** : le
+  `https://pausear.fr/#ancre-de-l-article`. C'est **la voie principale d'envoi** : le
   workflow `.github/workflows/bulletin-inscrits.yml` l'expédie à la liste Brevo « Bulletin Pause AR »
   dès qu'il arrive sur `main`, via `outils/envoyer-courriel.mjs`. Il faut pour cela les secrets
   `BREVO_CLE_API`, `BREVO_LISTE_ID` et `BREVO_EXPEDITEUR` (Settings → Secrets → Actions) ; si l'un
@@ -503,7 +504,7 @@ ajouté — de quoi être lu en deux minutes ou transféré à des collègues.
   Ordre : crit → warn → watch. Le pied de page — du PDF comme du courriel — porte la mention
   « **Fiches rédigées à l'aide de l'IA** — résumés à valider par le lecteur avant toute application
   clinique » (jamais « rédigées par Claude », règle du 01/09/2026).
-- Le PDF est publié avec le site : `https://hacuubo.github.io/PAUSE-AR/bulletin/` liste tous les
+- Le PDF est publié avec le site : `https://pausear.fr/bulletin/` liste tous les
   bulletins, le plus récent en tête.
 - Les fichiers de `bulletin/` (PDF, `index.html`, `etat.json`) doivent être **commités** : c'est `etat.json`
   qui évite de re-signaler la semaine suivante les articles déjà annoncés.
@@ -608,6 +609,10 @@ Congrès (calendrier tenu dans `outils/congres.json`, deux niveaux) :
   PubMed, relue par un agent distinct, puis `controle-cartes.mjs --tout --sources` : 0 erreur.
   Une fois l'édition zéro publiée, `node outils/bulletin.mjs --init` a mémorisé les 162 articles
   pour qu'aucun ne parte dans un courriel hebdomadaire.
+- 11/09/2026 — **nom de domaine `pausear.fr`** (OVH) branché sur GitHub Pages : quatre enregistrements
+  A vers les machines de GitHub, `www` en CNAME, enregistrements IPv6 d'OVH retirés, messagerie OVH
+  (MX, SPF, DKIM, SRV) laissée intacte. Le site passe de `hacuubo.github.io/PAUSE-AR/` à la racine de
+  `pausear.fr` : toutes les adresses du dépôt réécrites, fichier `CNAME` ajouté.
 - 11/09/2026 — **trois défauts corrigés dans `outils/controle-cartes.mjs`**, hérités de Pause Cardio
   et révélés par le volume : `--sources` interrogeait PubMed sans frein (au-delà de trois appels par
   seconde PubMed coupe, et l'appel échouait en silence — sur 162 cartes, 148 recherches ratées et

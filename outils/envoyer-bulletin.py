@@ -96,8 +96,8 @@ def corps_html(entrees, date_iso, nom_pdf):
     Le détail — résumés, chiffres et « Au cabinet » — est dans le PDF joint (<b>{html.escape(nom_pdf)}</b>),
     à lire ou à transférer tel quel.<br><br>
     Tableau de bord complet :
-    <a href="https://hacuubo.github.io/PAUSE-AR/" style="color:#2a78d6">hacuubo.github.io/pause-ar</a>
-    &middot; <a href="https://hacuubo.github.io/PAUSE-AR/bulletin/" style="color:#2a78d6">bulletins précédents</a>
+    <a href="https://pausear.fr/" style="color:#2a78d6">pausear.fr</a>
+    &middot; <a href="https://pausear.fr/bulletin/" style="color:#2a78d6">bulletins précédents</a>
   </td></tr>
   <tr><td style="padding-top:16px;margin-top:16px;border-top:1px solid #e4e3dc;font-size:12px;color:#898781;line-height:1.5">
     Fiches rédigées à l'aide de l'IA — à valider par le lecteur avant toute application clinique.
@@ -117,8 +117,8 @@ def corps_texte(entrees, date_iso):
             lignes.append(f"  {e['lien']}")
         lignes.append("")
     lignes += ["Le détail est dans le PDF joint.",
-               "Tableau de bord : https://hacuubo.github.io/PAUSE-AR/",
-               "Bulletins précédents : https://hacuubo.github.io/PAUSE-AR/bulletin/", "",
+               "Tableau de bord : https://pausear.fr/",
+               "Bulletins précédents : https://pausear.fr/bulletin/", "",
                "Fiches rédigées à l'aide de l'IA — à valider avant toute application clinique."]
     return "\n".join(lignes)
 

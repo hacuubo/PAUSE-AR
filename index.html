@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pause AR — veille bibliographique en anesthésie-réanimation</title>
 <meta name="description" content="Veille bibliographique hebdomadaire en anesthésie-réanimation : essais randomisés pivots, recommandations SFAR, ESAIC et ESICM, méta-analyses majeures, avec fiches de lecture. Bulletin gratuit chaque samedi matin.">
-<link rel="canonical" href="https://hacuubo.github.io/PAUSE-AR/">
+<link rel="canonical" href="https://pausear.fr/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pause AR">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Pause AR — veille bibliographique en anesthésie-réanimation">
 <meta property="og:description" content="Chaque semaine, les sorties qui comptent dans les grandes revues d’anesthésie-réanimation : essais pivots, recommandations, méta-analyses — avec fiches de lecture et bulletin par e-mail chaque samedi.">
-<meta property="og:url" content="https://hacuubo.github.io/PAUSE-AR/">
-<meta property="og:image" content="https://hacuubo.github.io/PAUSE-AR/icone/partage.png?v=3">
+<meta property="og:url" content="https://pausear.fr/">
+<meta property="og:image" content="https://pausear.fr/icone/partage.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Pause AR — courbe de capnographie interrompue par un symbole pause, et la devise « La veille hebdomadaire des grandes revues d’anesthésie-réanimation »">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pause AR — veille bibliographique en anesthésie-réanimation">
 <meta name="twitter:description" content="Les sorties qui comptent dans les grandes revues d’anesthésie-réanimation, chaque semaine. Bulletin par e-mail le samedi matin.">
-<meta name="twitter:image" content="https://hacuubo.github.io/PAUSE-AR/icone/partage.png?v=3">
+<meta name="twitter:image" content="https://pausear.fr/icone/partage.png?v=3">
 <meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-title" content="Pause AR">
@@ -563,27 +563,27 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://hacuubo.github.io/PAUSE-AR/#site",
-      "url": "https://hacuubo.github.io/PAUSE-AR/",
+      "@id": "https://pausear.fr/#site",
+      "url": "https://pausear.fr/",
       "name": "Pause AR",
       "description": "Veille bibliographique hebdomadaire en anesthésie-réanimation, assistée par IA : essais randomisés pivots, recommandations SFAR, ESAIC et ESICM, méta-analyses majeures, avec fiches de lecture.",
       "inLanguage": "fr",
-      "publisher": { "@id": "https://hacuubo.github.io/PAUSE-AR/#org" }
+      "publisher": { "@id": "https://pausear.fr/#org" }
     },
     {
       "@type": "Organization",
-      "@id": "https://hacuubo.github.io/PAUSE-AR/#org",
+      "@id": "https://pausear.fr/#org",
       "name": "Pause AR",
-      "url": "https://hacuubo.github.io/PAUSE-AR/",
-      "logo": "https://hacuubo.github.io/PAUSE-AR/icone/pausear-apple.png"
+      "url": "https://pausear.fr/",
+      "logo": "https://pausear.fr/icone/pausear-apple.png"
     },
     {
       "@type": "Periodical",
       "name": "Bulletin Pause AR",
-      "url": "https://hacuubo.github.io/PAUSE-AR/bulletin/",
+      "url": "https://pausear.fr/bulletin/",
       "inLanguage": "fr",
       "about": "Les nouvelles sorties bibliographiques de la semaine en anesthésie-réanimation, chaque samedi matin — avec un récapitulatif après les grands congrès.",
-      "publisher": { "@id": "https://hacuubo.github.io/PAUSE-AR/#org" }
+      "publisher": { "@id": "https://pausear.fr/#org" }
     }
   ]
 }
@@ -6672,7 +6672,7 @@
   // Sur téléphone, la feuille de partage du système (WhatsApp, SMS, mail…) ; ailleurs,
   // le lien est copié. L'adresse est toujours celle du site, quelle que soit la page
   // d'où l'on partage — la même que dans les courriels du bulletin.
-  const SITE_URL = 'https://hacuubo.github.io/PAUSE-AR/';
+  const SITE_URL = 'https://pausear.fr/';
   function texteDe(html) { const t = document.createElement('textarea'); t.innerHTML = html || ''; return t.value.replace(/\u00a0/g, ' '); }
   function signaler(message) {
     let t = document.getElementById('toast');

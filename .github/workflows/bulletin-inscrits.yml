@@ -1,6 +1,6 @@
 # Envoie le bulletin de la semaine aux inscrits (liste Brevo) dès qu'un nouveau
 # courriel de bulletin arrive sur « main ». C'est la voie principale d'envoi :
-# un e-mail où chaque article renvoie vers sa fiche sur hacuubo.github.io/pause-ar.
+# un e-mail où chaque article renvoie vers sa fiche sur pausear.fr.
 #
 # Réglage à enregistrer une seule fois dans GitHub :
 #   Settings → Secrets and variables → Actions → New repository secret

@@ -299,7 +299,7 @@ function rendreBulletin(nouveaux, dateIso, congres = '') {
 ${entrees}
   <footer class="pied">
     Tableau de bord complet &mdash; toutes les sorties, recherche FR/EN, fiches de lecture :
-    <a href="https://hacuubo.github.io/PAUSE-AR/">hacuubo.github.io/pause-ar</a><br>
+    <a href="https://pausear.fr/">pausear.fr</a><br>
     <b>Fiches r&eacute;dig&eacute;es &agrave; l&rsquo;aide de l&rsquo;IA &mdash; r&eacute;sum&eacute;s &agrave; valider par le lecteur avant toute application clinique, se reporter aux articles originaux.</b>
   </footer>
 </div>
@@ -319,7 +319,7 @@ ${entrees}
  *  HTML « à l'ancienne » (tableaux, styles en ligne), seule forme que
  *  Gmail, Outlook et Apple Mail affichent tous correctement. */
 function rendreCourriel(nouveaux, dateIso, { congres = '', rappel = false } = {}) {
-  const SITE_URL = 'https://hacuubo.github.io/PAUSE-AR/';
+  const SITE_URL = 'https://pausear.fr/';
   const n = nouveaux.length;
   const lundi = lundiDeLaSemaine(dateIso);
   const lundiPrecedent = new Date(lundi + 'T12:00:00Z');
@@ -400,7 +400,7 @@ ${blocs}
         <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;color:#898781;line-height:1.55;border-top:1px solid #e4e3dc;padding-top:12px;">
           <b style="color:#52514e;">Pause AR</b> — veille bibliographique hebdomadaire en anesthésie-réanimation.
           Fiches r&eacute;dig&eacute;es &agrave; l&rsquo;aide de l&rsquo;IA &mdash; r&eacute;sum&eacute;s &agrave; valider par le lecteur avant toute application clinique, se reporter aux articles originaux.<br>
-          Vous recevez ce message parce que vous vous &ecirc;tes inscrit sur <a href="${SITE_URL}" style="color:#898781;">hacuubo.github.io/pause-ar</a>.
+          Vous recevez ce message parce que vous vous &ecirc;tes inscrit sur <a href="${SITE_URL}" style="color:#898781;">pausear.fr</a>.
           <a href="{{ unsubscribe }}" style="color:#898781;">Se d&eacute;sinscrire</a>
         </div>
       </td></tr>
@@ -426,7 +426,7 @@ function rendreArchives(bulletins) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pause AR — bulletins hebdomadaires</title>
 <meta name="description" content="Tous les bulletins hebdomadaires Pause AR : les nouvelles sorties bibliographiques en anesthésie-réanimation de chaque semaine, avec fiches de lecture.">
-<link rel="canonical" href="https://hacuubo.github.io/PAUSE-AR/bulletin/">
+<link rel="canonical" href="https://pausear.fr/bulletin/">
 <link rel="icon" href="../icone/icone.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" sizes="180x180" href="../icone/pausear-180.png">
 <style>
