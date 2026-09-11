@@ -12,8 +12,10 @@
  *
  * Réglages, lus dans l'environnement (jamais écrits dans le dépôt) :
  *   BREVO_CLE_API   la clé API Brevo — absente, l'envoi est ignoré sans erreur
- *   BREVO_LISTE_ID  numéro de la liste destinataire (défaut : 3,
- *                   « Bulletin Pause AR »)
+ *   BREVO_LISTE_ID  numéro de la liste destinataire « Bulletin Pause AR »
+ *   BREVO_EXPEDITEUR  l'adresse d'envoi des campagnes — elle doit être VALIDÉE dans
+ *                   Brevo (Expéditeurs & IP). Absente, l'envoi s'arrête proprement
+ *                   avec un message clair plutôt que de partir d'une adresse fausse.
  * --------------------------------------------------------------------------- */
 
 import { readFileSync, readdirSync } from 'node:fs';
@@ -49,15 +51,25 @@ if (/courriel-apercu/.test(fichier) && !donne && !essai) {
 const html  = readFileSync(fichier, 'utf8');
 const sujet = (html.match(/<title>([^<]*)<\/title>/) || [, 'Pause AR — bulletin de la semaine'])[1]
   .replace(/&mdash;/g, '—').trim();
-const liste = Number(process.env.BREVO_LISTE_ID || 3);
+const liste = Number(process.env.BREVO_LISTE_ID || 0);
 const cle   = process.env.BREVO_CLE_API || '';
+const expediteur = process.env.BREVO_EXPEDITEUR || '';
 
 console.log(`Courriel : ${basename(fichier)} (${(html.length / 1024).toFixed(1)} ko)`);
 console.log(`Sujet    : ${sujet}`);
 console.log(`Liste    : ${liste}`);
 
+console.log(`Exp\u00e9diteur : ${expediteur || '(non r\u00e9gl\u00e9)'}`);
+
 if (essai) { console.log('ESSAI — rien n\'est parti.'); process.exit(0); }
 if (!cle)  { console.log('BREVO_CLE_API absente — envoi ignoré.'); process.exit(0); }
+if (!liste) { console.log('BREVO_LISTE_ID absent — envoi ignoré.'); process.exit(0); }
+if (!expediteur) {
+  // Brevo refuse une campagne dont l'expéditeur n'est pas validé : mieux vaut s'arrêter
+  // ici avec un message lisible que d'échouer au milieu d'un appel API.
+  console.log('BREVO_EXPEDITEUR absent — envoi ignoré (renseigner une adresse validée dans Brevo).');
+  process.exit(0);
+}
 
 const api = async (chemin, corps) => {
   const r = await fetch('https://api.brevo.com/v3' + chemin, {
@@ -87,7 +99,7 @@ const quand = programmation();
 const campagne = await api('/emailCampaigns', {
   name: sujet,
   subject: sujet,
-  sender: { name: 'Pause AR', email: 'CONTACT_A_DEFINIR' },
+  sender: { name: 'Pause AR', email: expediteur },
   htmlContent: html,
   recipients: { listIds: [liste] },
   ...(quand ? { scheduledAt: quand } : {}),

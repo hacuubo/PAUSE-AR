@@ -464,7 +464,8 @@ ajouté — de quoi être lu en deux minutes ou transféré à des collègues.
   `https://hacuubo.github.io/pause-ar/#ancre-de-l-article`. C'est **la voie principale d'envoi** : le
   workflow `.github/workflows/bulletin-inscrits.yml` l'expédie à la liste Brevo « Bulletin Pause AR »
   dès qu'il arrive sur `main`, via `outils/envoyer-courriel.mjs`. Il faut pour cela les secrets
-  `BREVO_CLE_API` et `BREVO_LISTE_ID` (Settings → Secrets → Actions) ; sans la clé, l'envoi est ignoré
+  `BREVO_CLE_API`, `BREVO_LISTE_ID` et `BREVO_EXPEDITEUR` (Settings → Secrets → Actions) ; si l'un
+  manque, l'envoi est ignoré
   sans erreur. Le pied du courriel doit garder le lien `{{ unsubscribe }}`, que Brevo remplace chez
   chaque destinataire. `--apercu` produit aussi `courriel-apercu.html`, jamais envoyé.
 - **Gabarit du courriel** (refondu le 01/09/2026) : sujet et en-tête « Les sorties de la semaine du
@@ -532,9 +533,12 @@ Deux voies, toutes deux automatiques :
    `.github/workflows/bulletin-inscrits.yml` + `outils/envoyer-courriel.mjs`). Réglages, à enregistrer
    une seule fois dans **Settings → Secrets and variables → Actions** :
    - `BREVO_CLE_API` — la clé API Brevo (SMTP & API → Clés API → Générer) ;
-   - `BREVO_LISTE_ID` — le numéro de la liste « Bulletin Pause AR ».
-   L'expéditeur des campagnes (champ `sender` d'`outils/envoyer-courriel.mjs`) doit être une **adresse
-   validée dans Brevo**. `node outils/etat-brevo.mjs` affiche l'état du compte et des listes.
+   - `BREVO_LISTE_ID` — le numéro de la liste « Bulletin Pause AR » ;
+   - `BREVO_EXPEDITEUR` — l'adresse d'envoi des campagnes, qui doit être **validée dans Brevo**
+     (Expéditeurs & IP). Elle n'est écrite nulle part dans le dépôt : `outils/envoyer-courriel.mjs`
+     la lit dans l'environnement, et **s'arrête proprement sans envoyer** si l'un des trois secrets
+     manque, plutôt que de faire échouer le workflow au milieu d'un appel API.
+   `node outils/etat-brevo.mjs` affiche l'état du compte et des listes.
 2. **Le PDF au propriétaire, par Gmail** — `.github/workflows/bulletin-mail.yml` +
    `outils/envoyer-bulletin.py` (Python standard, SMTP Gmail), déclenché par les pushes vers `main` qui
    touchent `bulletin/bulletin-*.pdf`. Secrets : `GMAIL_ADRESSE`, `GMAIL_MOT_DE_PASSE_APPLICATION`

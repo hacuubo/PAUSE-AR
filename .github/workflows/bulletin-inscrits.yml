@@ -5,9 +5,10 @@
 # Réglage à enregistrer une seule fois dans GitHub :
 #   Settings → Secrets and variables → Actions → New repository secret
 #     BREVO_CLE_API   la clé API Brevo (SMTP & API → Clés API → Générer)
+#     BREVO_LISTE_ID  le numéro de la liste « Bulletin Pause AR »
+#     BREVO_EXPEDITEUR  l'adresse d'envoi, VALIDÉE dans Brevo (Expéditeurs & IP)
 #
-# Facultatif : BREVO_LISTE_ID si la liste des inscrits n'est pas la n° 3.
-# Tant que la clé n'est pas enregistrée, l'envoi est ignoré sans erreur.
+# Tant que l'un des trois manque, l'envoi est ignoré sans erreur.
 
 name: Bulletin aux inscrits
 
@@ -46,6 +47,7 @@ jobs:
         env:
           BREVO_CLE_API: ${{ secrets.BREVO_CLE_API }}
           BREVO_LISTE_ID: ${{ secrets.BREVO_LISTE_ID }}
+          BREVO_EXPEDITEUR: ${{ secrets.BREVO_EXPEDITEUR }}
         run: node outils/etat-brevo.mjs
 
       - name: Contrôle qualité des cartes de la semaine (charte de rédaction)
@@ -57,6 +59,7 @@ jobs:
         env:
           BREVO_CLE_API: ${{ secrets.BREVO_CLE_API }}
           BREVO_LISTE_ID: ${{ secrets.BREVO_LISTE_ID }}
+          BREVO_EXPEDITEUR: ${{ secrets.BREVO_EXPEDITEUR }}
           FICHIER: ${{ github.event.inputs.fichier }}
           ESSAI: ${{ github.event.inputs.essai }}
         run: |
