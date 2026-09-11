@@ -8,7 +8,7 @@
  * résultat principal, « En pratique », fiche complète, liens), avec les
  * métadonnées que les moteurs lisent (description, canonical, Open Graph,
  * JSON-LD). Chaque page renvoie vers le site principal, à la carte
- * correspondante (https://hacuubo.github.io/pause-ar/#ancre) : c'est là que se lit la
+ * correspondante (https://hacuubo.github.io/PAUSE-AR/#ancre) : c'est là que se lit la
  * veille, les pages par article ne servent qu'à être trouvées. Le bouton
  * « Partager » du site continue lui aussi de pointer vers le site principal
  * (décision du 08/09/2026).
@@ -31,7 +31,7 @@ import { fileURLToPath } from 'node:url';
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DOSSIER = join(RACINE, 'fiche');
-const SITE = 'https://hacuubo.github.io/pause-ar/';
+const SITE = 'https://hacuubo.github.io/PAUSE-AR/';
 const VERIFIER = process.argv.includes('--verifier');
 
 // mêmes clés, mêmes couleurs et même ordre que la table SPECS d'index.html

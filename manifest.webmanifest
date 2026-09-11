@@ -3,26 +3,26 @@
   "short_name": "Pause AR",
   "description": "Chaque semaine, l'essentiel des publications qui comptent en anesthésie-réanimation : essais pivots, recommandations et grandes méta-analyses.",
   "lang": "fr",
-  "start_url": "/pause-ar/",
-  "scope": "/pause-ar/",
+  "start_url": "/PAUSE-AR/",
+  "scope": "/PAUSE-AR/",
   "display": "standalone",
   "background_color": "#f9f9f7",
   "theme_color": "#141412",
   "icons": [
     {
-      "src": "/pause-ar/icone/pausear-180.png",
+      "src": "/PAUSE-AR/icone/pausear-180.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pause-ar/icone/pausear-apple.png",
+      "src": "/PAUSE-AR/icone/pausear-apple.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pause-ar/icone/pausear-512.png",
+      "src": "/PAUSE-AR/icone/pausear-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
