@@ -507,8 +507,13 @@ ajouté — de quoi être lu en deux minutes ou transféré à des collègues.
   - **s'il n'y a rien de neuf** → affiche `RIEN` et n'écrit rien… sauf avec `--rappel` (le samedi) :
     il écrit alors le courriel « Semaine calme » qui rappelle les sorties du dernier bulletin
     (`RAPPEL`), sans PDF ni entrée d'archives.
-- Contenu d'une entrée du PDF : surspécialité, niveau, type d'étude, titre (cliquable vers l'article
+- Contenu d'une entrée du PDF : surspécialité, type d'étude, titre (cliquable vers l'article
   original), journal et date, résumé, et l'encadré **« En pratique »** repris de la fiche de lecture.
+  **Aucun niveau affiché** (règle du 12/09/2026) : l'étiquette « Changement de pratique » /
+  « À connaître » / « Veille » a été retirée du bulletin, comme elle l'avait été de la plateforme le
+  29/08/2026 et du courriel le 01/09/2026 — le lecteur n'a pas à lire notre verdict éditorial sur
+  chaque article. Les niveaux restent obligatoires sur les cartes : ils servent au **classement** des
+  entrées (crit → warn → watch) et au chapeau. Ne pas réintroduire le badge.
   Ordre : crit → warn → watch. Le pied de page — du PDF comme du courriel — porte la mention
   « **Fiches rédigées à l'aide de l'IA** — résumés à valider par le lecteur avant toute application
   clinique » (jamais « rédigées par Claude », règle du 01/09/2026).

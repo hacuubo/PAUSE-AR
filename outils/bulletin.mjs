@@ -112,10 +112,14 @@ const SPECS = {
   arret:       { nom: 'Arrêt cardiaque, urgences & pré-hospitalier', couleur: '#a8348c' },
   sedation:    { nom: 'Sédation, delirium & après-réanimation',      couleur: '#9c5a3c' },
 };
+// Les niveaux ne sont plus AFFICHÉS nulle part — ni sur la plateforme (29/08/2026),
+// ni dans le courriel (01/09/2026), ni dans le bulletin PDF (12/09/2026) : le lecteur
+// n'a pas à lire notre verdict éditorial sur chaque article. Ils restent obligatoires
+// sur les cartes et servent ici au seul classement des entrées (rang) et au chapeau.
 const NIVEAUX = {
-  crit:  { nom: 'Changement de pratique probable', court: 'Changement de pratique', couleur: '#d03b3b', rang: 0 },
-  warn:  { nom: 'À connaître',                     court: 'À connaître',            couleur: '#c98500', rang: 1 },
-  watch: { nom: 'Veille — à suivre',               court: 'Veille',                 couleur: '#898781', rang: 2 },
+  crit:  { rang: 0 },
+  warn:  { rang: 1 },
+  watch: { rang: 2 },
 };
 
 function lireArticles(html) {
@@ -214,7 +218,6 @@ function rendreBulletin(nouveaux, dateIso, congres = '') {
 
   const entrees = tri.map(a => {
     const spec   = SPECS[a.spec]   || { nom: a.spec, couleur: '#898781' };
-    const niveau = NIVEAUX[a.niveau];
     const lienPrincipal = (a.liens.find(l => /original/i.test(l.texte)) || a.liens[0] || {}).href || '';
     const autres = a.liens.filter(l => l.href !== lienPrincipal);
     return `
@@ -223,7 +226,6 @@ function rendreBulletin(nouveaux, dateIso, congres = '') {
       <div class="txt">
         <div class="ligne1">
           <span class="spec" style="color:${spec.couleur}">${spec.nom}</span>
-          <span class="niv" style="background:${niveau.couleur}">${niveau.court}</span>
           ${a.type ? `<span class="type">${a.type}</span>` : ''}
         </div>
         <h3>${lienPrincipal ? `<a href="${lienPrincipal}">${a.titre}</a>` : a.titre}</h3>
@@ -268,7 +270,6 @@ function rendreBulletin(nouveaux, dateIso, congres = '') {
   .txt { flex: 1; min-width: 0; }
   .ligne1 { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-bottom: 4px; }
   .ligne1 .spec { font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
-  .ligne1 .niv { font-size: 7.5pt; font-weight: 700; color: #fff; border-radius: 99px; padding: 1.5px 7px; letter-spacing: .02em; }
   .ligne1 .type { font-size: 8pt; color: #7a7975; font-weight: 600; }
   h3 { font-size: 11.6pt; line-height: 1.28; font-weight: 700; }
   h3 a { color: #111; text-decoration: none; }
