@@ -630,6 +630,10 @@ Congrès (calendrier tenu dans `outils/congres.json`, deux niveaux) :
   `contact@pausear.fr` créée chez OVH. Le compte transactionnel de Brevo doit être activé par leur
   support avant que la double confirmation soit disponible : sur un compte neuf, les deux options sont
   grisées et Brevo coche « pas d'e-mail de confirmation », qu'il ne faut pas garder.
+  **Chaîne d'envoi vérifiée de bout en bout le 12/09/2026** : les trois secrets enregistrés, essai à
+  blanc concluant, puis envoi réel du bulletin du 12 septembre à la liste (campagne Brevo id 5,
+  « ENVOYÉ »). C'est précisément ce qui n'avait jamais été vérifié sur Pause Cardio, où la routine
+  « réussissait » chaque matin sans que rien ne parte.
 - 11/09/2026 — **nom de domaine `pausear.fr`** (OVH) branché sur GitHub Pages : quatre enregistrements
   A vers les machines de GitHub, `www` en CNAME, enregistrements IPv6 d'OVH retirés, messagerie OVH
   (MX, SPF, DKIM, SRV) laissée intacte. Le site passe de `hacuubo.github.io/PAUSE-AR/` à la racine de
