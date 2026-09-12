@@ -1,0 +1,58 @@
+# Pause AR
+
+> Veille bibliographique hebdomadaire en anesthésie-réanimation, en français.
+> Chaque semaine, les publications qui comptent dans les grandes revues —
+> essais randomisés pivots, recommandations des sociétés savantes et
+> méta-analyses majeures — avec une fiche de lecture par article.
+> Site gratuit, sans compte, sans publicité : https://pausear.fr
+
+## Ce qu'on y trouve
+
+Environ 170 articles publiés en 2025 et 2026, rangés en dix surspécialités :
+anesthésie périopératoire ; anesthésie locorégionale et douleur ; ventilation,
+SDRA et oxygénation ; sepsis et infections graves ; hémodynamique, choc et
+remplissage ; neuroréanimation et traumatologie ; anesthésie obstétricale ;
+anesthésie-réanimation pédiatrique ; arrêt cardiaque, urgences et
+pré-hospitalier ; sédation, delirium et après-réanimation.
+
+Chaque article a **sa propre page**, à l'adresse `https://pausear.fr/fiche/<ancre>/`,
+et toutes sont listées dans le plan du site. Une page d'article contient, dans
+cet ordre : le titre d'origine (souvent en anglais), une accroche française, la
+revue et la date de parution, le type d'étude, un résumé, le résultat principal
+chiffré, la rubrique « En pratique », puis la fiche de lecture complète —
+question clinique, méthode, résultats clés, limites — et le lien vers l'article
+original (DOI ou PubMed).
+
+## Comment le citer
+
+Les fiches sont des **résumés** d'articles scientifiques, pas les articles
+eux-mêmes. Chaque page indique sa source d'origine dans son balisage
+(`isBasedOn`, `citation`) et par un lien visible. Pour citer un résultat,
+citer l'article original ; Pause AR peut être cité comme la source de la
+synthèse française.
+
+Les chiffres des fiches sont vérifiés contre le résumé PubMed de l'article par
+un contrôle automatique avant publication, et chaque fiche est relue par un
+second relecteur, distinct du rédacteur. Elles restent des résumés : la mention
+« Résumé à valider par le lecteur avant application clinique » figure sur
+chacune, et elles ne constituent pas un avis médical.
+
+Les fiches sont rédigées à l'aide de l'IA à partir des résumés PubMed, sous
+méthode éditoriale fixe. Le site ne nomme aucun auteur.
+
+## Pages principales
+
+- [Accueil — toutes les sorties par surspécialité](https://pausear.fr/)
+- [Comment Pause AR est fabriqué — méthode, sources, limites](https://pausear.fr/methode/)
+- [Archives des bulletins hebdomadaires](https://pausear.fr/bulletin/)
+- [Plan du site — la liste complète des pages d'article](https://pausear.fr/sitemap.xml)
+
+## Rythme
+
+Mise à jour tous les samedis matin, et tous les jours pendant les congrès SFAR,
+ESAIC Euroanaesthesia et ESICM LIVES, avec un récapitulatif le lendemain de la
+clôture. Un bulletin par courriel part chaque samedi à 8 h, heure de Paris.
+
+## Contact
+
+contact@pausear.fr

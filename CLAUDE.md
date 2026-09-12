@@ -544,6 +544,48 @@ ajouté — de quoi être lu en deux minutes ou transféré à des collègues.
   archives (le bulletin part par courriel ; `/bulletin/` reste accessible par adresse directe).
   Ne pas les retirer, `outils/bulletin.mjs` s'en sert toujours.
 
+## Être trouvé — moteurs de recherche et assistants (règle du 12/09/2026)
+
+Le site n'existe que pour être trouvé et repris. Quatre pièces, toutes à la racine, à ne pas retirer :
+
+- **`robots.txt`** : tout est ouvert. Les blocs nommés (Googlebot, Bingbot, mais aussi `GPTBot`,
+  `OAI-SearchBot`, `ClaudeBot`, `Claude-SearchBot`, `PerplexityBot`, `Google-Extended`,
+  `Applebot-Extended`, `CCBot`, `meta-externalagent`…) **ne restreignent rien** — `User-agent: *
+  Allow: /` les couvrait déjà. Ils disent explicitement « oui » aux robots qui cherchent leur propre
+  nom, et rendent l'intention lisible. Ne jamais y écrire de `Disallow` sans demande explicite : ce
+  serait se retirer des réponses des assistants.
+- **`llms.txt`** : la fiche d'identité du site pour les modèles de langue (convention llmstxt.org) —
+  ce que le site contient, comment une page d'article est structurée, **comment le citer** (citer
+  l'article original ; Pause AR pour la synthèse française), les limites, le rythme. À mettre à jour
+  quand le nombre de surspécialités ou le rythme change.
+- **`methode/index.html`** : la page « Comment Pause AR est fabriqué » — sélection, rédaction,
+  double contrôle, rôle de l'IA, ce que les fiches ne sont pas, indépendance et vie privée. C'est la
+  page que Google lit pour juger du sérieux d'un site médical, et celle qu'un assistant cite quand on
+  lui demande ce qu'est Pause AR. **Écrite à la main, pas régénérée** : la mettre à jour quand la
+  méthode change. Liée depuis le pied de page du tableau de bord et de chaque page d'article, et
+  présente dans `sitemap.xml`.
+- **`404.html`** : page d'erreur maison, en `noindex, follow`, qui renvoie vers le tableau de bord, la
+  méthode et les bulletins.
+
+Sur chaque page (`index.html`, pages d'article, méthode) :
+`<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large,
+max-video-preview:-1">` — c'est ce qui autorise Google à afficher un extrait long et une grande
+vignette plutôt qu'une ligne tronquée.
+
+**Données structurées** (JSON-LD, `outils/pages-articles.mjs` pour les fiches, en dur dans
+`index.html` pour l'accueil) :
+
+- accueil : `WebSite`, `Organization` (avec `knowsAbout`, `email`, et `publishingPrinciples` qui
+  pointe sur `/methode/`), `CollectionPage`, `AboutPage`, `Periodical` ;
+- page d'article : `Article` + `BreadcrumbList`. L'`author` est **l'organisation, jamais une
+  personne** — le site ne nomme personne. `keywords` reprend le `data-kw` bilingue de la carte, et
+  `isBasedOn` **et** `citation` pointent tous deux sur le DOI ou le lien PubMed de l'article résumé :
+  la fiche est une synthèse, elle ne se substitue pas à la source.
+
+**Ne jamais déclarer une donnée structurée fausse.** En particulier, pas de `SearchAction` tant que
+la recherche du site n'a pas d'adresse partageable (`?q=…`) : elle est aujourd'hui purement locale au
+navigateur.
+
 ## Fréquentation du site
 
 Compteur **GoatCounter** : une balise `<script data-goatcounter=…>` juste avant `</body>` dans
