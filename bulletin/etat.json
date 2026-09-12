@@ -161,9 +161,27 @@
     "arandomizedtrialofshareddecisionmakingincodestatusdiscussions",
     "afocusedupdatetotheclinicalpracticeguidelinesforthepreventionandmanagementofpainanxietyagitationsedationdeliriumimmobilityandsleepdisruptioninadultpatientsintheicu",
     "remimazolamforproceduralsedationasystematicreviewwithmetaanalysesandtrialsequentialanalyses",
-    "prolongedmechanicalventilationincriticallyillpatientssixmonthmortalitycarepathwaysandqualityoflife"
+    "prolongedmechanicalventilationincriticallyillpatientssixmonthmortalitycarepathwaysandqualityoflife",
+    "perioperativemechanicalventilationstrategiesinadultcardiacsurgerywithcardiopulmonarybypassametaanalysisofrandomisedcontrolledtrials",
+    "longtermmortalityandfunctionaloutcomesafterextracorporealmembraneoxygenationincriticallyilladultsasystematicreviewandmetaanalysis",
+    "extracorporealco2eliminationforacuteexacerbationofseverecopdrequiringinvasivemechanicalventilationarandomizedcontrolledtrialthexcopdtrial",
+    "earlymobilizationformechanicalventilationforsepsisoracuterespiratoryfailureeveramulticenterrandomizedcontrolledtrialwith12monthoutcomes",
+    "effectivenessofselectivecyclooxygenase2inhibitorsforpostoperativepainmanagementusingmultidimensionalpainassessmentasystematicreviewandmetaanalysisofrandomizedcontrolledtrials",
+    "mortalityeffectofperipheralperfusionguidedresuscitationinvasodilatoryshockasystematicreviewanddualfrequentistbayesianmetaanalysisofrandomizedtrials",
+    "ketamineforanalgosedationinmechanicallyventilatedadultsadoubleblindrandomizedtrial"
   ],
-  "bulletins": [],
-  "dernier_lot": [],
-  "derniere_execution": "2026-09-11"
+  "bulletins": [
+    {
+      "date": "2026-09-12",
+      "fichier": "bulletin-2026-09-12.pdf",
+      "nb": 3,
+      "crit": 0
+    }
+  ],
+  "dernier_lot": [
+    "effectivenessofselectivecyclooxygenase2inhibitorsforpostoperativepainmanagementusingmultidimensionalpainassessmentasystematicreviewandmetaanalysisofrandomizedcontrolledtrials",
+    "mortalityeffectofperipheralperfusionguidedresuscitationinvasodilatoryshockasystematicreviewanddualfrequentistbayesianmetaanalysisofrandomizedtrials",
+    "ketamineforanalgosedationinmechanicallyventilatedadultsadoubleblindrandomizedtrial"
+  ],
+  "derniere_execution": "2026-09-12"
 }
