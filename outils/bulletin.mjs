@@ -221,7 +221,7 @@ function rendreBulletin(nouveaux, dateIso, congres = '') {
     const lienPrincipal = (a.liens.find(l => /original/i.test(l.texte)) || a.liens[0] || {}).href || '';
     const autres = a.liens.filter(l => l.href !== lienPrincipal);
     return `
-    <article class="e${a.niveau === 'crit' ? ' une' : ''}">
+    <article class="e${/recommandation/i.test(brut(a.type)) ? ' reco' : ''}">
       <div class="fil" style="background:${spec.couleur}"></div>
       <div class="txt">
         <div class="ligne1">
@@ -264,7 +264,7 @@ function rendreBulletin(nouveaux, dateIso, congres = '') {
   article.e { display: flex; gap: 9px; padding: 11px 0 12px; border-bottom: 1px solid #e4e3dc;
               page-break-inside: avoid; break-inside: avoid; }
   article.e:last-of-type { border-bottom: none; }
-  article.e.une { background: #fdf6f6; border-left: 0; padding-left: 8px; padding-right: 8px;
+  article.e.reco { background: #f1f7f6; border-left: 0; padding-left: 8px; padding-right: 8px;
                   border-radius: 4px; border-bottom: 1px solid #f0dede; }
   .fil { width: 3px; border-radius: 2px; flex: none; }
   .txt { flex: 1; min-width: 0; }

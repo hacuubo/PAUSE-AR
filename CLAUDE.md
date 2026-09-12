@@ -514,6 +514,9 @@ ajouté — de quoi être lu en deux minutes ou transféré à des collègues.
   29/08/2026 et du courriel le 01/09/2026 — le lecteur n'a pas à lire notre verdict éditorial sur
   chaque article. Les niveaux restent obligatoires sur les cartes : ils servent au **classement** des
   entrées (crit → warn → watch) et au chapeau. Ne pas réintroduire le badge.
+  **Le fond légèrement teinté est réservé aux recommandations** (`article.e.reco`, `#f1f7f6`, la même
+  teinte que dans le courriel), et non plus au niveau « changement de pratique » : le PDF suit ainsi la
+  règle de la plateforme, où le rouge `--status-critical` ne sert qu'aux fiches.
   Ordre : crit → warn → watch. Le pied de page — du PDF comme du courriel — porte la mention
   « **Fiches rédigées à l'aide de l'IA** — résumés à valider par le lecteur avant toute application
   clinique » (jamais « rédigées par Claude », règle du 01/09/2026).
