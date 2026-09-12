@@ -218,6 +218,14 @@ Autres règles de mise en page :
   (`iframe[name=pa-abo-cadre]`) pour que le lecteur ne quitte pas la page. On ne peut donc pas lire le
   verdict de Brevo : c'est le mail de confirmation (double opt-in) qui fait foi, et le message affiché
   le dit ainsi. Ne pas retirer la case à cocher de consentement ni la mention sur l'usage de l'adresse.
+  **Jamais de reCAPTCHA sur le formulaire Brevo** (règle du 12/09/2026) : la page n'affiche pas le
+  formulaire hébergé par Brevo, elle poste ses propres champs (`EMAIL`, `locale`, `html_type`, et le
+  piège à robots `email_address_check`) sur l'adresse `serve/`. Un captcha attendrait un jeton que la
+  page ne peut pas fournir et Brevo refuserait **chaque** inscription, sans erreur visible ; Brevo le
+  recommande pourtant d'un bandeau à la création du formulaire. Le champ invisible suffit. Côté
+  réglages du formulaire : double confirmation obligatoire, et les deux « pages de confirmation » de
+  Brevo restent décochées — la page affiche son propre message après l'envoi, et Brevo montre sa page
+  standard après le clic sur le lien.
 - **Encart « Ajouter l'appli Pause AR »** (`section.instal`, règle du 03/09/2026) : construit par le
   script (bloc « installation sur l'écran d'accueil » en bas de page), en deux exemplaires comme
   l'inscription — une ligne repliée « 📱 Ajouter l'appli Pause AR » **juste sous l'encart d'inscription
@@ -609,6 +617,11 @@ Congrès (calendrier tenu dans `outils/congres.json`, deux niveaux) :
   PubMed, relue par un agent distinct, puis `controle-cartes.mjs --tout --sources` : 0 erreur.
   Une fois l'édition zéro publiée, `node outils/bulletin.mjs --init` a mémorisé les 162 articles
   pour qu'aucun ne parte dans un courriel hebdomadaire.
+- 12/09/2026 — **inscription branchée** : formulaire Brevo « Bulletin Pause AR » (double opt-in) posé
+  dans `ABO_FORM`, l'encart d'inscription s'affiche donc enfin. Adresse d'expédition
+  `contact@pausear.fr` créée chez OVH. Le compte transactionnel de Brevo doit être activé par leur
+  support avant que la double confirmation soit disponible : sur un compte neuf, les deux options sont
+  grisées et Brevo coche « pas d'e-mail de confirmation », qu'il ne faut pas garder.
 - 11/09/2026 — **nom de domaine `pausear.fr`** (OVH) branché sur GitHub Pages : quatre enregistrements
   A vers les machines de GitHub, `www` en CNAME, enregistrements IPv6 d'OVH retirés, messagerie OVH
   (MX, SPF, DKIM, SRV) laissée intacte. Le site passe de `hacuubo.github.io/PAUSE-AR/` à la racine de
