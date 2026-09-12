@@ -133,7 +133,9 @@ h1{font-size:23px;line-height:1.3;margin:6px 0 8px}
 footer{border-top:1px solid var(--grid);margin-top:30px;padding:18px 18px 40px;text-align:center;font-size:14px;color:var(--text2)}
 footer p{max-width:620px;margin:6px auto}
 `.trim();
-const MARQUE = '<svg viewBox="0 0 92 26" aria-hidden="true"><path class="tr" d="M0,13 H18 l3,-6 l4,12 l3,-6 H36"/><rect class="ba" x="40" y="4" width="4" height="18" rx="1.5"/><rect class="ba" x="48" y="4" width="4" height="18" rx="1.5"/><path class="tr" d="M56,13 H62 l3,-6 l4,12 l3,-6 H92"/></svg>';
+// Le MEME trace que svg.brand-mark d'index.html : la courbe de capnographie.
+// Il etait reste l'ECG de Pause Cardio, sur les 169 pages d'article (12/09/2026).
+const MARQUE = '<svg viewBox="0 0 92 26" aria-hidden="true"><path class="tr" d="M0,21 H7 L11,7 L23,5.5 L27,21 H38"/><rect class="ba" x="42" y="3" width="4" height="20" rx="1.5"/><rect class="ba" x="50" y="3" width="4" height="20" rx="1.5"/><path class="tr" d="M58,21 H61 L65,7 L77,5.5 L81,21 H92"/></svg>';
 
 function page(c) {
   const [couleur, nomSpec] = SPECS[c.spec] || ['#898781', ''];
