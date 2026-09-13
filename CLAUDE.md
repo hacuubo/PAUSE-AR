@@ -683,6 +683,19 @@ Congrès (calendrier tenu dans `outils/congres.json`, deux niveaux) :
 
 ## Historique
 
+- 13/09/2026 — **reprise de langue de tout le stock** : les 169 cartes passées par la troisième passe
+  de la chaîne qualité (`outils/BRIEF-LANGUE.md`), par lots de 12, chaque lot confié à un relecteur
+  distinct qui n'avait pas la source. 164 cartes réécrites, 5 laissées telles quelles, **aucune
+  refusée** par le garde-fou de `outils/revision/langue-appliquer.py` — aucun chiffre, aucune section
+  de fiche, aucune puce, aucune mention finale n'a bougé. 455 corrections, et **23 doutes de fond
+  signalés sans être tranchés**, consignés dans `revision/2026-09-13/journal.md` : ils repartent au
+  relecteur de fidélité, plusieurs sont de vraies erreurs (borne d'intervalle de confiance inversée,
+  épisodes présentés comme une durée, risque relatif incohérent avec ses propres pourcentages).
+  Trois défauts d'outillage trouvés au passage, tous corrigés : `outils/revision/extraire.py` portait
+  encore les surspécialités de Pause Cardio ; la règle « référence géographique » différait entre les
+  deux dépôts ; et `\b` ne connaissant que l'ASCII en JavaScript, `/\b[ée]vidence\b/` ne s'était
+  jamais déclenchée sur « évidence ».
+
 - 10/09/2026 — création de Pause AR à partir du dépôt terminé de Pause Cardio : même architecture,
   mêmes outils, même chaîne qualité, même routine ; logo « pause dans la capnographie » et couleur de
   marque bleu-vert (#0d6e6b / #3aada6), nouvelles sources et nouveaux congrès.
