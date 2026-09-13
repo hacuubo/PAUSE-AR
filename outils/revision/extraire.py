@@ -74,7 +74,7 @@ print(sum(1 for v in ids.values() if v), 'cartes avec résumé PubMed')
 
 os.makedirs(W + '/lots', exist_ok=True); os.makedirs(W + '/out', exist_ok=True); os.makedirs(W + '/valide', exist_ok=True)
 n = 0
-for spec in ['rythmo', 'interv', 'imagerie', 'ic', 'usic', 'cmh', 'prev', 'sport', 'onco']:
+for spec in ['periop', 'alr', 'vent', 'sepsis', 'hemo', 'neurotrauma', 'obst', 'ped', 'arret', 'sedation']:
     cs = [c for c in cartes if c['spec'] == spec]
     for i in range(0, len(cs), 8):
         n += 1; d = f'{W}/lots/lot{n:02d}'; os.makedirs(d + '/abs', exist_ok=True)
