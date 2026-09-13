@@ -129,7 +129,7 @@ qui était déplié.
 
 ## Chaîne qualité — obligatoire pour tout texte diffusé (règle du 06/09/2026)
 
-Quatre pièces, toutes versionnées dans le dépôt, s'appliquent à **chaque nouvelle carte, chaque mise à
+Cinq pièces, toutes versionnées dans le dépôt, s'appliquent à **chaque nouvelle carte, chaque mise à
 jour de carte et chaque courriel** ; la routine, les sous-agents et toute session qui touche au contenu
 doivent les suivre, sans exception :
 
@@ -141,7 +141,18 @@ doivent les suivre, sans exception :
 3. **`outils/BRIEF-CONTROLE.md`** — la relecture de fidélité par un **agent distinct du rédacteur** :
    chiffres, groupes, critères, degré de certitude, cohérence accroche/résumé/résultat principal/fiche.
    Aucune carte n'est insérée dans `index.html` sans cette relecture.
-4. **`node outils/controle-cartes.mjs`** — le contrôle automatique, à lancer après toute modification :
+4. **`outils/BRIEF-LANGUE.md`** — la relecture de langue par un **troisième agent**, distinct du
+   rédacteur ET du relecteur de fidélité (règle du 13/09/2026). On ne lui donne **pas** la source :
+   son travail n'est pas de vérifier, c'est d'entendre. Il lit en anesthésiste-réanimateur
+   francophone, chaque phrase à voix haute, et ne corrige que la langue — calques de l'anglais, style
+   télégraphique, phrases qui se démontent, abréviations, ton, typographie, musique d'ensemble entre
+   l'accroche, le résumé, le résultat principal et la fiche. **Il ne touche à aucun chiffre ni à aucun
+   fait** : une phrase qui lui paraît fausse est signalée dans `doutes_de_fond` et repart au relecteur
+   de fidélité, jamais tranchée par lui.
+   Pourquoi une passe séparée : sur Pause Cardio la langue n'était que le quatrième critère d'une
+   relecture scientifique, et des tournures maladroites sont passées — exactes, mais pénibles à lire.
+   Un relecteur qui vérifie des chiffres lit pour contrôler, pas pour entendre.
+5. **`node outils/controle-cartes.mjs`** — le contrôle automatique, à lancer après toute modification :
    structure, accroche, date de parution, typographie française, formules interdites (« vs », « Au
    cabinet », mention d'auteur ou d'IA, référence géographique, effets journalistiques), cohérence des
    chiffres entre les présentations ; avec `--sources`, fidélité des chiffres au résumé PubMed. Par
@@ -566,6 +577,21 @@ Le site n'existe que pour être trouvé et repris. Quatre pièces, toutes à la 
   présente dans `sitemap.xml`.
 - **`404.html`** : page d'erreur maison, en `noindex, follow`, qui renvoie vers le tableau de bord, la
   méthode et les bulletins.
+- **Le fichier `<clé>.txt`** (32 caractères hexadécimaux) : la clé IndexNow. **Ce n'est pas un secret**,
+  et sa place n'est pas dans les secrets GitHub : le protocole exige qu'elle soit servie publiquement
+  par le site, c'est ainsi que le moteur vérifie qui annonce les adresses. Un seul fichier de ce nom à
+  la racine, contenant exactement la clé qui lui donne son nom — `outils/indexnow.mjs` refuse de partir
+  sinon.
+
+**Prévenir les moteurs dès la publication** (règle du 13/09/2026) : `outils/indexnow.mjs` annonce les
+adresses nouvelles ou modifiées à Bing, Yandex, Seznam et Naver, qui partagent le même point d'entrée
+(protocole IndexNow). Sans argument, il annonce les cartes du jour (`data-ajout` = aujourd'hui) et la
+page d'accueil ; `--tout` couvre le plan du site, `--essai` montre sans envoyer. Le workflow
+`.github/workflows/indexnow.yml` le lance à chaque arrivée sur `main` touchant `index.html`, `fiche/`
+ou `methode/`. **Google ne participe pas à IndexNow** — pour lui, c'est `sitemap.xml` et son propre
+rythme qui font foi ; ce n'est donc pas un raccourci vers Google, mais c'est le chemin le plus court
+vers les réponses de ChatGPT et de Copilot, qui s'appuient sur l'index de Bing. Le script et le
+workflow **n'échouent jamais** : prévenir un moteur est un confort, pas une condition de publication.
 
 Sur chaque page (`index.html`, pages d'article, méthode) :
 `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large,
