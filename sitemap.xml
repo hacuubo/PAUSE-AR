@@ -20,6 +20,12 @@
   </url>
   <!--FICHES:DEBUT-->
   <url>
+    <loc>https://pausear.fr/fiche/nutrition-clinique-de-l-adulte-en-contexte-perioperatoire-et-en/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/prospective-randomized-comparison-of-electromyographic-neuromusc/</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -376,6 +382,12 @@
   <url>
     <loc>https://pausear.fr/fiche/videolaryngoscope-designs-for-tracheal-intubation-in-adults-a-sy/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/prise-en-charge-therapeutique-des-infections-intra-abdominales-d/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -856,6 +868,12 @@
   <url>
     <loc>https://pausear.fr/fiche/effectiveness-of-nasal-high-flow-oxygen-during-apnoea-on-hypoxae/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/sedation-procedurale-en-structure-de-medecine-d-urgence/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
