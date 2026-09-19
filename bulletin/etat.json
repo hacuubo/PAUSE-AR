@@ -168,7 +168,12 @@
     "earlymobilizationformechanicalventilationforsepsisoracuterespiratoryfailureeveramulticenterrandomizedcontrolledtrialwith12monthoutcomes",
     "effectivenessofselectivecyclooxygenase2inhibitorsforpostoperativepainmanagementusingmultidimensionalpainassessmentasystematicreviewandmetaanalysisofrandomizedcontrolledtrials",
     "mortalityeffectofperipheralperfusionguidedresuscitationinvasodilatoryshockasystematicreviewanddualfrequentistbayesianmetaanalysisofrandomizedtrials",
-    "ketamineforanalgosedationinmechanicallyventilatedadultsadoubleblindrandomizedtrial"
+    "ketamineforanalgosedationinmechanicallyventilatedadultsadoubleblindrandomizedtrial",
+    "nutritioncliniquedeladulteencontexteperioperatoireetensoinscritiques",
+    "priseenchargetherapeutiquedesinfectionsintraabdominalesdeladulte",
+    "anesthesielocoregionaleenchirurgiepediatrique",
+    "sedationproceduraleenstructuredemedecinedurgence",
+    "prospectiverandomizedcomparisonofelectromyographicneuromuscularresponsesfromtheadductorpollicisandabductordigitiminimimusclesduringrocuroniuminducedneuromuscularblock"
   ],
   "bulletins": [
     {
@@ -176,12 +181,16 @@
       "fichier": "bulletin-2026-09-12.pdf",
       "nb": 3,
       "crit": 0
+    },
+    {
+      "date": "2026-09-19",
+      "fichier": "bulletin-2026-09-19.pdf",
+      "nb": 1,
+      "crit": 0
     }
   ],
   "dernier_lot": [
-    "effectivenessofselectivecyclooxygenase2inhibitorsforpostoperativepainmanagementusingmultidimensionalpainassessmentasystematicreviewandmetaanalysisofrandomizedcontrolledtrials",
-    "mortalityeffectofperipheralperfusionguidedresuscitationinvasodilatoryshockasystematicreviewanddualfrequentistbayesianmetaanalysisofrandomizedtrials",
-    "ketamineforanalgosedationinmechanicallyventilatedadultsadoubleblindrandomizedtrial"
+    "prospectiverandomizedcomparisonofelectromyographicneuromuscularresponsesfromtheadductorpollicisandabductordigitiminimimusclesduringrocuroniuminducedneuromuscularblock"
   ],
-  "derniere_execution": "2026-09-12"
+  "derniere_execution": "2026-09-19"
 }

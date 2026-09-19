@@ -1,13 +1,11 @@
 {
- "date": "2026-09-12",
- "sujet": "Les sorties de la semaine du lundi 7 septembre",
+ "date": "2026-09-19",
+ "sujet": "Les sorties de la semaine du lundi 14 septembre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-09-07",
- "nb": 3,
+ "lundi": "2026-09-14",
+ "nb": 1,
  "ancres": [
-  "effectiveness-of-selective-cyclooxygenase-2-inhibitors-for-posto",
-  "mortality-effect-of-peripheral-perfusion-guided-resuscitation-in",
-  "ketamine-for-analgosedation-in-mechanically-ventilated-adults-a"
+  "prospective-randomized-comparison-of-electromyographic-neuromusc"
  ]
 }
