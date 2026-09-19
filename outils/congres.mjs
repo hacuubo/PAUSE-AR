@@ -89,6 +89,12 @@ for (const c of congres) {
 for (const [fam, c] of familles) {
   if (c.fin && c.fin < aujourdhui) {
     const annee = Number(c.fin.slice(0, 4)) + 1;
+    // Si l'édition suivante est DÉJÀ au calendrier, cette ligne n'a plus d'objet : l'entrée existe,
+    // et c'est sa propre ligne « dates inconnues » — reportable, elle — qui demande les dates. Sans
+    // ce filtre la ligne se rallumait chaque matin : la famille retient l'entrée dont la date de fin
+    // est la plus grande, donc la dernière édition PASSÉE (une édition à dates nulles n'a pas de
+    // `fin`), et le report inscrit sur l'édition à venir n'était jamais lu (constaté le 19/09/2026).
+    if (congres.some(x => x.famille === fam && (x.sigle || '').includes(String(annee)))) continue;
     const texte = `chercher les dates de l'édition ${annee} (site officiel) et l'ajouter à outils/congres.json`;
     if (reporte(c)) reportes.push(`famille ${fam} : ${texte} — revérifier le ${c.prochaine_verification}`);
     else aVerifier.push(`famille ${fam} : ${texte}`);
