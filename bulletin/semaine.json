@@ -1,11 +1,12 @@
 {
- "date": "2026-09-19",
- "sujet": "Les sorties de la semaine du lundi 14 septembre",
+ "date": "2026-09-26",
+ "sujet": "Les sorties de la semaine du lundi 21 septembre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-09-14",
- "nb": 1,
+ "lundi": "2026-09-21",
+ "nb": 2,
  "ancres": [
-  "prospective-randomized-comparison-of-electromyographic-neuromusc"
+  "prise-en-charge-des-voies-aeriennes-de-l-adulte-au-bloc-operatoi",
+  "organisation-de-la-prise-en-charge-des-urgences-vitales-intra-ho"
  ]
 }

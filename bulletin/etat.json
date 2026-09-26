@@ -173,7 +173,9 @@
     "priseenchargetherapeutiquedesinfectionsintraabdominalesdeladulte",
     "anesthesielocoregionaleenchirurgiepediatrique",
     "sedationproceduraleenstructuredemedecinedurgence",
-    "prospectiverandomizedcomparisonofelectromyographicneuromuscularresponsesfromtheadductorpollicisandabductordigitiminimimusclesduringrocuroniuminducedneuromuscularblock"
+    "prospectiverandomizedcomparisonofelectromyographicneuromuscularresponsesfromtheadductorpollicisandabductordigitiminimimusclesduringrocuroniuminducedneuromuscularblock",
+    "priseenchargedesvoiesaeriennesdeladulteaublocoperatoire",
+    "organisationdelapriseenchargedesurgencesvitalesintrahospitalieres"
   ],
   "bulletins": [
     {
@@ -187,10 +189,17 @@
       "fichier": "bulletin-2026-09-19.pdf",
       "nb": 1,
       "crit": 0
+    },
+    {
+      "date": "2026-09-26",
+      "fichier": "bulletin-2026-09-26.pdf",
+      "nb": 2,
+      "crit": 0
     }
   ],
   "dernier_lot": [
-    "prospectiverandomizedcomparisonofelectromyographicneuromuscularresponsesfromtheadductorpollicisandabductordigitiminimimusclesduringrocuroniuminducedneuromuscularblock"
+    "priseenchargedesvoiesaeriennesdeladulteaublocoperatoire",
+    "organisationdelapriseenchargedesurgencesvitalesintrahospitalieres"
   ],
-  "derniere_execution": "2026-09-19"
+  "derniere_execution": "2026-09-26"
 }
