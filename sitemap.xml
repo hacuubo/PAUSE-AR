@@ -254,6 +254,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pausear.fr/fiche/prise-en-charge-des-voies-aeriennes-de-l-adulte-au-bloc-operatoi/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/long-term-mortality-and-functional-outcomes-after-extracorporeal/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -868,6 +874,12 @@
   <url>
     <loc>https://pausear.fr/fiche/effectiveness-of-nasal-high-flow-oxygen-during-apnoea-on-hypoxae/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/organisation-de-la-prise-en-charge-des-urgences-vitales-intra-ho/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
