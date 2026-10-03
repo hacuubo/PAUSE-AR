@@ -20,14 +20,20 @@
   </url>
   <!--FICHES:DEBUT-->
   <url>
-    <loc>https://pausear.fr/fiche/nutrition-clinique-de-l-adulte-en-contexte-perioperatoire-et-en/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://pausear.fr/fiche/intraoperative-blood-pressure-targeting-in-noncardiac-surgery-a/</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pausear.fr/fiche/prospective-randomized-comparison-of-electromyographic-neuromusc/</loc>
     <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/nutrition-clinique-de-l-adulte-en-contexte-perioperatoire-et-en/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -76,6 +82,12 @@
   <url>
     <loc>https://pausear.fr/fiche/sugammadex-versus-neostigmine-for-reversal-of-neuromuscular-bloc/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/gestion-des-anticoagulants-pour-une-procedure-invasive-programme/</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -782,14 +794,20 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pausear.fr/fiche/anesthesie-locoregionale-en-chirurgie-pediatrique/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://pausear.fr/fiche/permissive-blood-pressure-targets-in-pediatric-critical-care-the/</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pausear.fr/fiche/gastric-residual-volume-assessment-in-critically-ill-children-th/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/anesthesie-locoregionale-en-chirurgie-pediatrique/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
