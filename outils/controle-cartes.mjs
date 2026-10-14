@@ -96,13 +96,32 @@ function nombresEn(t) {
   t = t.replace(/(?<=\d)·(?=\d)/g, '.').replace(/(?<=\d)[\s\u00a0\u202f\u2009,](?=\d{3}(?!\d))/g, '').replace(/(?<![\d.])\.(?=\d)/g, '0.');
   return new Set(t.match(/\d+(?:\.\d+)?/g) || []);
 }
-function connu(n, autorises) {
+/**
+ * `source` = les chiffres réellement lus dans le résumé (ou sur la carte, pour la cohérence interne).
+ * `tolere` = la tolérance : petits entiers, 95, 100, millésimes. Elle n'autorise qu'une égalité
+ * directe, jamais une conversion.
+ *
+ * Deux trous corrigés le 14/10/2026, tous deux dans la conversion pourcentage ↔ fraction, et tous
+ * deux de même effet : `--sources` acceptait sans vérification les valeurs sous 0,5, c'est-à-dire
+ * tout p significatif et tout rapport de risque favorable.
+ *   1. (x/100).toFixed(2) vaut « 0.00 » pour tout x < 0,5, que `norm` réduit à « 0 », présent dans
+ *      la tolérance : 0,37 ou 0,004 passaient.
+ *   2. (x*100) tombe sur un petit entier pour tout x de la forme 0,01 à 0,31, lui aussi dans la
+ *      tolérance : 0,28 passait même quand le résumé ne contenait aucun 28.
+ * D'où la séparation des deux ensembles. Vérifié sur les 181 cartes du site : aucun écart réel
+ * n'avait été laissé passer, le correctif ne révèle aucune erreur dormante.
+ */
+function connu(n, source, tolere = new Set()) {
   const norm = x => String(x).replace(/\.0+$/, '');
-  if (autorises.has(n) || autorises.has(norm(n))) return true;
+  if (source.has(n) || source.has(norm(n)) || tolere.has(n) || tolere.has(norm(n))) return true;
   const x = Number(n); if (Number.isNaN(x)) return false;
-  for (const y of [x / 100, x * 100]) if (autorises.has(norm(y.toFixed(2))) || autorises.has(String(y))) return true;
+  for (const y of [x / 100, x * 100]) {
+    const r = norm(y.toFixed(2));
+    if (r !== '0' && source.has(r)) return true;
+    if (source.has(String(y))) return true;
+  }
   const dec = n.includes('.') ? n.split('.')[1].length : 0;
-  for (const a of autorises) if (/^\d+\.\d+$/.test(a) && a.split('.')[1].length > dec && Number(Number(a).toFixed(dec)) === x) return true;
+  for (const a of source) if (/^\d+\.\d+$/.test(a) && a.split('.')[1].length > dec && Number(Number(a).toFixed(dec)) === x) return true;
   return false;
 }
 
@@ -309,9 +328,10 @@ if (opt('sources') && cible.length) {
     const abstract = [...resume.matchAll(/<AbstractText[^>]*>([\s\S]*?)<\/AbstractText>/g)].map(x => x[1].replace(/<[^>]+>/g, ' ')).join(' ');
     if (!abstract) { A(c, 'aucun résumé PubMed trouvé (recommandation, communiqué ou titre non indexé) : fidélité non contrôlable automatiquement'); continue; }
     const clair = decoder(abstract);
-    const autorises = new Set([...nombresEn(clair), ...nombresEnLettres(clair), ...Array.from({ length: 32 }, (_, i) => String(i)), '95', '100', '2024', '2025', '2026']);
+    const source = new Set([...nombresEn(clair), ...nombresEnLettres(clair)]);
+    const tolere = new Set([...Array.from({ length: 32 }, (_, i) => String(i)), '95', '100', '2024', '2025', '2026']);
     const texte = [c.fr, brut(c.sum), brut(c.cle), brut(c.fiche)].join(' ').replace(/\b\d{1,2}\s+[a-zéû]+\s+20\d\d/g, ' ');
-    const manquants = [...nombresFr(texte)].filter(n => !/^(19|20)\d\d$/.test(n) && !connu(n, autorises)).sort();
+    const manquants = [...nombresFr(texte)].filter(n => !/^(19|20)\d\d$/.test(n) && !connu(n, source, tolere)).sort();
     if (manquants.length) E(c, `chiffres absents du résumé PubMed ${pmid} : ${manquants.join(', ')} — vérifier sur l’article ou retirer`);
     else console.log(`SOURCE ${c.ancre} : tous les chiffres se retrouvent dans le résumé PubMed ${pmid}`);
   }
