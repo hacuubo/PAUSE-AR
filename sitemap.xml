@@ -20,6 +20,12 @@
   </url>
   <!--FICHES:DEBUT-->
   <url>
+    <loc>https://pausear.fr/fiche/intraoperative-dobutamine-plus-norepinephrine-to-prevent-postope/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/intraoperative-blood-pressure-targeting-in-noncardiac-surgery-a/</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -406,6 +412,12 @@
   <url>
     <loc>https://pausear.fr/fiche/videolaryngoscope-designs-for-tracheal-intubation-in-adults-a-sy/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/effect-of-vasopressin-initiation-threshold-on-septic-shock-morta/</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1016,13 +1028,19 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pausear.fr/fiche/early-mobilization-for-mechanical-ventilation-for-sepsis-or-acut/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <loc>https://pausear.fr/fiche/isoflurane-based-inhaled-sedation-in-mechanically-ventilated-adu/</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pausear.fr/fiche/ketamine-for-analgosedation-in-mechanically-ventilated-adults-a/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/early-mobilization-for-mechanical-ventilation-for-sepsis-or-acut/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
