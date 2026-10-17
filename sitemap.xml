@@ -278,14 +278,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pausear.fr/fiche/prise-en-charge-des-voies-aeriennes-de-l-adulte-au-bloc-operatoi/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://pausear.fr/fiche/weaning-strategies-for-high-flow-nasal-cannula-in-critically-ill/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pausear.fr/fiche/long-term-mortality-and-functional-outcomes-after-extracorporeal/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <loc>https://pausear.fr/fiche/prise-en-charge-des-voies-aeriennes-de-l-adulte-au-bloc-operatoi/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -298,6 +298,12 @@
   <url>
     <loc>https://pausear.fr/fiche/noninvasive-respiratory-support-for-adult-patients-with-acute-re/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/long-term-mortality-and-functional-outcomes-after-extracorporeal/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1024,6 +1030,12 @@
   <url>
     <loc>https://pausear.fr/fiche/prehospital-management-of-adults-with-traumatic-out-of-hospital/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/open-visiting-policy-and-delirium-in-adult-patients-in-icus-a-sy/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
