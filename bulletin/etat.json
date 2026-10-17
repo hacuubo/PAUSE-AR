@@ -178,7 +178,15 @@
     "organisationdelapriseenchargedesurgencesvitalesintrahospitalieres",
     "gestiondesanticoagulantspouruneprocedureinvasiveprogrammee",
     "intraoperativebloodpressuretargetinginnoncardiacsurgeryabayesianrandomeffectsmetaanalysisofrandomizedtrials",
-    "permissivebloodpressuretargetsinpediatriccriticalcarethepressurerandomizedclinicaltrial"
+    "permissivebloodpressuretargetsinpediatriccriticalcarethepressurerandomizedclinicaltrial",
+    "prophylactichighflownasaloxygenvsconventionaloxygenforpreventionofpostoperativerespiratorycomplicationsarandomizedtrial",
+    "earlymultimodalvasopressorstrategyinsepticshockresultsofthetricyclerandomizedcontrolledtrial",
+    "intraoperativedobutamineplusnorepinephrinetopreventpostoperativeacutekidneyinjuryinsepticshockarandomizedclinicaltrial",
+    "weaningstrategiesforhighflownasalcannulaincriticallyilladultsarandomizedclinicaltrial",
+    "effectofvasopressininitiationthresholdonsepticshockmortalitythevassprclustercrossoverrandomizedstrategytrial",
+    "theroleoffibrinogenconcentrateinthereductionofallogeneicbloodproductrequirementsasystematicreviewandmetaanalysis",
+    "openvisitingpolicyanddeliriuminadultpatientsinicusasystematicreviewandmetaanalysisofrandomizedclinicaltrials",
+    "isofluranebasedinhaledsedationinmechanicallyventilatedadultswithacutehypoxemicrespiratoryfailurethesaveicurandomizedclinicaltrial"
   ],
   "bulletins": [
     {
@@ -204,11 +212,21 @@
       "fichier": "bulletin-2026-10-03.pdf",
       "nb": 2,
       "crit": 1
+    },
+    {
+      "date": "2026-10-17",
+      "fichier": "bulletin-2026-10-17.pdf",
+      "nb": 6,
+      "crit": 1
     }
   ],
   "dernier_lot": [
-    "intraoperativebloodpressuretargetinginnoncardiacsurgeryabayesianrandomeffectsmetaanalysisofrandomizedtrials",
-    "permissivebloodpressuretargetsinpediatriccriticalcarethepressurerandomizedclinicaltrial"
+    "intraoperativedobutamineplusnorepinephrinetopreventpostoperativeacutekidneyinjuryinsepticshockarandomizedclinicaltrial",
+    "weaningstrategiesforhighflownasalcannulaincriticallyilladultsarandomizedclinicaltrial",
+    "effectofvasopressininitiationthresholdonsepticshockmortalitythevassprclustercrossoverrandomizedstrategytrial",
+    "theroleoffibrinogenconcentrateinthereductionofallogeneicbloodproductrequirementsasystematicreviewandmetaanalysis",
+    "openvisitingpolicyanddeliriuminadultpatientsinicusasystematicreviewandmetaanalysisofrandomizedclinicaltrials",
+    "isofluranebasedinhaledsedationinmechanicallyventilatedadultswithacutehypoxemicrespiratoryfailurethesaveicurandomizedclinicaltrial"
   ],
-  "derniere_execution": "2026-10-03"
+  "derniere_execution": "2026-10-17"
 }

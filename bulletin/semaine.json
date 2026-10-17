@@ -1,12 +1,16 @@
 {
- "date": "2026-10-03",
- "sujet": "Les sorties de la semaine du lundi 28 septembre",
+ "date": "2026-10-17",
+ "sujet": "Les sorties de la semaine du lundi 12 octobre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-09-28",
- "nb": 2,
+ "lundi": "2026-10-12",
+ "nb": 6,
  "ancres": [
-  "intraoperative-blood-pressure-targeting-in-noncardiac-surgery-a",
-  "permissive-blood-pressure-targets-in-pediatric-critical-care-the"
+  "intraoperative-dobutamine-plus-norepinephrine-to-prevent-postope",
+  "weaning-strategies-for-high-flow-nasal-cannula-in-critically-ill",
+  "effect-of-vasopressin-initiation-threshold-on-septic-shock-morta",
+  "the-role-of-fibrinogen-concentrate-in-the-reduction-of-allogenei",
+  "open-visiting-policy-and-delirium-in-adult-patients-in-icus-a-sy",
+  "isoflurane-based-inhaled-sedation-in-mechanically-ventilated-adu"
  ]
 }
