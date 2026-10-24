@@ -186,7 +186,10 @@
     "effectofvasopressininitiationthresholdonsepticshockmortalitythevassprclustercrossoverrandomizedstrategytrial",
     "theroleoffibrinogenconcentrateinthereductionofallogeneicbloodproductrequirementsasystematicreviewandmetaanalysis",
     "openvisitingpolicyanddeliriuminadultpatientsinicusasystematicreviewandmetaanalysisofrandomizedclinicaltrials",
-    "isofluranebasedinhaledsedationinmechanicallyventilatedadultswithacutehypoxemicrespiratoryfailurethesaveicurandomizedclinicaltrial"
+    "isofluranebasedinhaledsedationinmechanicallyventilatedadultswithacutehypoxemicrespiratoryfailurethesaveicurandomizedclinicaltrial",
+    "relativeefficacyofexerciseprehabilitationinterventionsandtheircomponentsasystematicreviewandnetworkmetaanalysisofrandomisedcontrolledtrials",
+    "individualizedcardiacindexguidedhemodynamictherapyinhighriskpatientsundergoingelectivemajorabdominalsurgerythepelicanrandomizedclinicaltrial",
+    "effectofelectricalimpedancetomographyguidedpositiveendexpiratorypressureoptimisationonpostoperativepulmonarycomplicationsinlaparoscopiccolorectalsurgeryarandomisedcontrolledtrial"
   ],
   "bulletins": [
     {
@@ -218,15 +221,17 @@
       "fichier": "bulletin-2026-10-17.pdf",
       "nb": 6,
       "crit": 1
+    },
+    {
+      "date": "2026-10-24",
+      "fichier": "bulletin-2026-10-24.pdf",
+      "nb": 2,
+      "crit": 1
     }
   ],
   "dernier_lot": [
-    "intraoperativedobutamineplusnorepinephrinetopreventpostoperativeacutekidneyinjuryinsepticshockarandomizedclinicaltrial",
-    "weaningstrategiesforhighflownasalcannulaincriticallyilladultsarandomizedclinicaltrial",
-    "effectofvasopressininitiationthresholdonsepticshockmortalitythevassprclustercrossoverrandomizedstrategytrial",
-    "theroleoffibrinogenconcentrateinthereductionofallogeneicbloodproductrequirementsasystematicreviewandmetaanalysis",
-    "openvisitingpolicyanddeliriuminadultpatientsinicusasystematicreviewandmetaanalysisofrandomizedclinicaltrials",
-    "isofluranebasedinhaledsedationinmechanicallyventilatedadultswithacutehypoxemicrespiratoryfailurethesaveicurandomizedclinicaltrial"
+    "individualizedcardiacindexguidedhemodynamictherapyinhighriskpatientsundergoingelectivemajorabdominalsurgerythepelicanrandomizedclinicaltrial",
+    "effectofelectricalimpedancetomographyguidedpositiveendexpiratorypressureoptimisationonpostoperativepulmonarycomplicationsinlaparoscopiccolorectalsurgeryarandomisedcontrolledtrial"
   ],
-  "derniere_execution": "2026-10-17"
+  "derniere_execution": "2026-10-24"
 }

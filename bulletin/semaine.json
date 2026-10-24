@@ -1,16 +1,12 @@
 {
- "date": "2026-10-17",
- "sujet": "Les sorties de la semaine du lundi 12 octobre",
+ "date": "2026-10-24",
+ "sujet": "Les sorties de la semaine du lundi 19 octobre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-10-12",
- "nb": 6,
+ "lundi": "2026-10-19",
+ "nb": 2,
  "ancres": [
-  "intraoperative-dobutamine-plus-norepinephrine-to-prevent-postope",
-  "weaning-strategies-for-high-flow-nasal-cannula-in-critically-ill",
-  "effect-of-vasopressin-initiation-threshold-on-septic-shock-morta",
-  "the-role-of-fibrinogen-concentrate-in-the-reduction-of-allogenei",
-  "open-visiting-policy-and-delirium-in-adult-patients-in-icus-a-sy",
-  "isoflurane-based-inhaled-sedation-in-mechanically-ventilated-adu"
+  "individualized-cardiac-index-guided-hemodynamic-therapy-in-high",
+  "effect-of-electrical-impedance-tomography-guided-positive-end-ex"
  ]
 }
