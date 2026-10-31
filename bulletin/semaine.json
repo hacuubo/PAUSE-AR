@@ -1,12 +1,15 @@
 {
- "date": "2026-10-24",
- "sujet": "Les sorties de la semaine du lundi 19 octobre",
+ "date": "2026-10-31",
+ "sujet": "Les sorties de la semaine du lundi 26 octobre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-10-19",
- "nb": 2,
+ "lundi": "2026-10-26",
+ "nb": 5,
  "ancres": [
-  "individualized-cardiac-index-guided-hemodynamic-therapy-in-high",
-  "effect-of-electrical-impedance-tomography-guided-positive-end-ex"
+  "effect-of-remimazolam-versus-propofol-anaesthesia-on-postoperati",
+  "effects-of-perioperative-esketamine-infusion-on-chronic-pain-aft",
+  "regional-analgesic-techniques-for-postoperative-pain-after-kidne",
+  "chlorhexidine-within-a-standardized-oral-care-bundle-for-the-pre",
+  "prone-positioning-and-high-frequency-oscillatory-ventilation-in"
  ]
 }

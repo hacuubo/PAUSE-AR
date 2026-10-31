@@ -189,7 +189,12 @@
     "isofluranebasedinhaledsedationinmechanicallyventilatedadultswithacutehypoxemicrespiratoryfailurethesaveicurandomizedclinicaltrial",
     "relativeefficacyofexerciseprehabilitationinterventionsandtheircomponentsasystematicreviewandnetworkmetaanalysisofrandomisedcontrolledtrials",
     "individualizedcardiacindexguidedhemodynamictherapyinhighriskpatientsundergoingelectivemajorabdominalsurgerythepelicanrandomizedclinicaltrial",
-    "effectofelectricalimpedancetomographyguidedpositiveendexpiratorypressureoptimisationonpostoperativepulmonarycomplicationsinlaparoscopiccolorectalsurgeryarandomisedcontrolledtrial"
+    "effectofelectricalimpedancetomographyguidedpositiveendexpiratorypressureoptimisationonpostoperativepulmonarycomplicationsinlaparoscopiccolorectalsurgeryarandomisedcontrolledtrial",
+    "effectofremimazolamversuspropofolanaesthesiaonpostoperativedeliriuminneurovascularsurgeryarandomisednoninferioritytrial",
+    "effectsofperioperativeesketamineinfusiononchronicpainaftervideoassistedthoracoscopiclungresectionamulticentrerandomiseddoubleblindclinicaltrial",
+    "regionalanalgesictechniquesforpostoperativepainafterkidneytransplantationasystematicreviewandbayesianmetaanalysis",
+    "chlorhexidinewithinastandardizedoralcarebundleforthepreventionofventilatorassociatedpneumoniaapragmaticclusterrandomizedcrossovertrialinsixmedicalintensivecareunits",
+    "pronepositioningandhighfrequencyoscillatoryventilationinearlypaediatricacuterespiratorydistresssyndromeprospectaninternationaltwobytwofactorialresponseadaptivephase3randomisedcontrolledtrial"
   ],
   "bulletins": [
     {
@@ -227,11 +232,20 @@
       "fichier": "bulletin-2026-10-24.pdf",
       "nb": 2,
       "crit": 1
+    },
+    {
+      "date": "2026-10-31",
+      "fichier": "bulletin-2026-10-31.pdf",
+      "nb": 5,
+      "crit": 1
     }
   ],
   "dernier_lot": [
-    "individualizedcardiacindexguidedhemodynamictherapyinhighriskpatientsundergoingelectivemajorabdominalsurgerythepelicanrandomizedclinicaltrial",
-    "effectofelectricalimpedancetomographyguidedpositiveendexpiratorypressureoptimisationonpostoperativepulmonarycomplicationsinlaparoscopiccolorectalsurgeryarandomisedcontrolledtrial"
+    "effectofremimazolamversuspropofolanaesthesiaonpostoperativedeliriuminneurovascularsurgeryarandomisednoninferioritytrial",
+    "effectsofperioperativeesketamineinfusiononchronicpainaftervideoassistedthoracoscopiclungresectionamulticentrerandomiseddoubleblindclinicaltrial",
+    "regionalanalgesictechniquesforpostoperativepainafterkidneytransplantationasystematicreviewandbayesianmetaanalysis",
+    "chlorhexidinewithinastandardizedoralcarebundleforthepreventionofventilatorassociatedpneumoniaapragmaticclusterrandomizedcrossovertrialinsixmedicalintensivecareunits",
+    "pronepositioningandhighfrequencyoscillatoryventilationinearlypaediatricacuterespiratorydistresssyndromeprospectaninternationaltwobytwofactorialresponseadaptivephase3randomisedcontrolledtrial"
   ],
-  "derniere_execution": "2026-10-24"
+  "derniere_execution": "2026-10-31"
 }
