@@ -194,7 +194,13 @@
     "effectsofperioperativeesketamineinfusiononchronicpainaftervideoassistedthoracoscopiclungresectionamulticentrerandomiseddoubleblindclinicaltrial",
     "regionalanalgesictechniquesforpostoperativepainafterkidneytransplantationasystematicreviewandbayesianmetaanalysis",
     "chlorhexidinewithinastandardizedoralcarebundleforthepreventionofventilatorassociatedpneumoniaapragmaticclusterrandomizedcrossovertrialinsixmedicalintensivecareunits",
-    "pronepositioningandhighfrequencyoscillatoryventilationinearlypaediatricacuterespiratorydistresssyndromeprospectaninternationaltwobytwofactorialresponseadaptivephase3randomisedcontrolledtrial"
+    "pronepositioningandhighfrequencyoscillatoryventilationinearlypaediatricacuterespiratorydistresssyndromeprospectaninternationaltwobytwofactorialresponseadaptivephase3randomisedcontrolledtrial",
+    "procedurespecificbleedingriskassessmentamultidisciplinaryexpertconsensuscompaniontothe2026periproceduralanticoagulantmanagementguidelines",
+    "individualizedmeanarterialpressureduringcardiacsurgerytheoptipamrandomizedclinicaltrial",
+    "thoracicepiduralversusparavertebralblockadeforreducingchronicpostthoracotomypaintopic2openlabelparallelgroupsuperioritymulticentrerandomisedcontrolledtrial",
+    "sodiumbicarbonatetherapyformetabolicacidosisincriticallyillpatientsabayesiansystematicreviewandmetaanalysisofrandomisedcontrolledtrials",
+    "perioperativerespiratoryadverseeventsinchildrenundergoingadenotonsillectomywithlaryngealmaskairwayversusendotrachealtubeventilationmulticentrerandomisedcontrolledtrial",
+    "2026internationalliaisoncommitteeonresuscitationconsensusonsciencewithtreatmentrecommendationssummaryfromthebasiclifesupportadvancedlifesupportpediatriclifesupportneonatallifesupporteducationimplementationandteamsandfirstaidtaskforces"
   ],
   "bulletins": [
     {
@@ -238,14 +244,20 @@
       "fichier": "bulletin-2026-10-31.pdf",
       "nb": 5,
       "crit": 1
+    },
+    {
+      "date": "2026-11-07",
+      "fichier": "bulletin-2026-11-07.pdf",
+      "nb": 5,
+      "crit": 2
     }
   ],
   "dernier_lot": [
-    "effectofremimazolamversuspropofolanaesthesiaonpostoperativedeliriuminneurovascularsurgeryarandomisednoninferioritytrial",
-    "effectsofperioperativeesketamineinfusiononchronicpainaftervideoassistedthoracoscopiclungresectionamulticentrerandomiseddoubleblindclinicaltrial",
-    "regionalanalgesictechniquesforpostoperativepainafterkidneytransplantationasystematicreviewandbayesianmetaanalysis",
-    "chlorhexidinewithinastandardizedoralcarebundleforthepreventionofventilatorassociatedpneumoniaapragmaticclusterrandomizedcrossovertrialinsixmedicalintensivecareunits",
-    "pronepositioningandhighfrequencyoscillatoryventilationinearlypaediatricacuterespiratorydistresssyndromeprospectaninternationaltwobytwofactorialresponseadaptivephase3randomisedcontrolledtrial"
+    "individualizedmeanarterialpressureduringcardiacsurgerytheoptipamrandomizedclinicaltrial",
+    "thoracicepiduralversusparavertebralblockadeforreducingchronicpostthoracotomypaintopic2openlabelparallelgroupsuperioritymulticentrerandomisedcontrolledtrial",
+    "sodiumbicarbonatetherapyformetabolicacidosisincriticallyillpatientsabayesiansystematicreviewandmetaanalysisofrandomisedcontrolledtrials",
+    "perioperativerespiratoryadverseeventsinchildrenundergoingadenotonsillectomywithlaryngealmaskairwayversusendotrachealtubeventilationmulticentrerandomisedcontrolledtrial",
+    "2026internationalliaisoncommitteeonresuscitationconsensusonsciencewithtreatmentrecommendationssummaryfromthebasiclifesupportadvancedlifesupportpediatriclifesupportneonatallifesupporteducationimplementationandteamsandfirstaidtaskforces"
   ],
-  "derniere_execution": "2026-10-31"
+  "derniere_execution": "2026-11-07"
 }
