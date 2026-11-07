@@ -20,8 +20,20 @@
   </url>
   <!--FICHES:DEBUT-->
   <url>
+    <loc>https://pausear.fr/fiche/individualized-mean-arterial-pressure-during-cardiac-surgery-the/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/effect-of-remimazolam-versus-propofol-anaesthesia-on-postoperati/</loc>
     <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/procedure-specific-bleeding-risk-assessment-a-multidisciplinary/</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -184,6 +196,12 @@
   <url>
     <loc>https://pausear.fr/fiche/elective-peri-operative-management-of-adults-taking-glucagon-lik/</loc>
     <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pausear.fr/fiche/thoracic-epidural-versus-paravertebral-blockade-for-reducing-chr/</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -602,6 +620,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pausear.fr/fiche/sodium-bicarbonate-therapy-for-metabolic-acidosis-in-critically/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/the-role-of-fibrinogen-concentrate-in-the-reduction-of-allogenei/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -872,6 +896,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pausear.fr/fiche/perioperative-respiratory-adverse-events-in-children-undergoing/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/prone-positioning-and-high-frequency-oscillatory-ventilation-in/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -980,20 +1010,26 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pausear.fr/fiche/2026-international-liaison-committee-on-resuscitation-consensus/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pausear.fr/fiche/organisation-de-la-prise-en-charge-des-urgences-vitales-intra-ho/</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pausear.fr/fiche/sedation-procedurale-en-structure-de-medecine-d-urgence/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://pausear.fr/fiche/sodium-bicarbonate-for-in-hospital-cardiac-arrest-a-randomized-c/</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pausear.fr/fiche/sodium-bicarbonate-for-in-hospital-cardiac-arrest-a-randomized-c/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <loc>https://pausear.fr/fiche/sedation-procedurale-en-structure-de-medecine-d-urgence/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
