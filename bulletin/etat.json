@@ -200,7 +200,13 @@
     "thoracicepiduralversusparavertebralblockadeforreducingchronicpostthoracotomypaintopic2openlabelparallelgroupsuperioritymulticentrerandomisedcontrolledtrial",
     "sodiumbicarbonatetherapyformetabolicacidosisincriticallyillpatientsabayesiansystematicreviewandmetaanalysisofrandomisedcontrolledtrials",
     "perioperativerespiratoryadverseeventsinchildrenundergoingadenotonsillectomywithlaryngealmaskairwayversusendotrachealtubeventilationmulticentrerandomisedcontrolledtrial",
-    "2026internationalliaisoncommitteeonresuscitationconsensusonsciencewithtreatmentrecommendationssummaryfromthebasiclifesupportadvancedlifesupportpediatriclifesupportneonatallifesupporteducationimplementationandteamsandfirstaidtaskforces"
+    "2026internationalliaisoncommitteeonresuscitationconsensusonsciencewithtreatmentrecommendationssummaryfromthebasiclifesupportadvancedlifesupportpediatriclifesupportneonatallifesupporteducationimplementationandteamsandfirstaidtaskforces",
+    "intravenouslidocaineinliversurgeryarandomizeddoubleblindtrial",
+    "effectofdiscontinuingantihypertensivesonperioperativehypotensioninolderpatientsbeforenoncardiacsurgerymulticentrerandomiseddoubleblindcontrolledtrial",
+    "cangrelorversuscrushedticagrelorinacutemyocardialinfarctioncomplicatedbycardiogenicshockdaptshockamiarandomiseddoubleblindtrial",
+    "communityandemsinterventionstoimprovesurvivalincardiacarrest",
+    "prehospitalextracorporeallifesupportinrefractoryoutofhospitalcardiacarrest",
+    "efficacyandsafetyofoliceridineversusremifentanilforanalgesiainmechanicallyventilatedcriticallyilladultscoroamamulticenterassessorblindednoninferiorityrandomizedcontrolledtrial"
   ],
   "bulletins": [
     {
@@ -250,14 +256,20 @@
       "fichier": "bulletin-2026-11-07.pdf",
       "nb": 5,
       "crit": 2
+    },
+    {
+      "date": "2026-11-14",
+      "fichier": "bulletin-2026-11-14.pdf",
+      "nb": 5,
+      "crit": 1
     }
   ],
   "dernier_lot": [
-    "individualizedmeanarterialpressureduringcardiacsurgerytheoptipamrandomizedclinicaltrial",
-    "thoracicepiduralversusparavertebralblockadeforreducingchronicpostthoracotomypaintopic2openlabelparallelgroupsuperioritymulticentrerandomisedcontrolledtrial",
-    "sodiumbicarbonatetherapyformetabolicacidosisincriticallyillpatientsabayesiansystematicreviewandmetaanalysisofrandomisedcontrolledtrials",
-    "perioperativerespiratoryadverseeventsinchildrenundergoingadenotonsillectomywithlaryngealmaskairwayversusendotrachealtubeventilationmulticentrerandomisedcontrolledtrial",
-    "2026internationalliaisoncommitteeonresuscitationconsensusonsciencewithtreatmentrecommendationssummaryfromthebasiclifesupportadvancedlifesupportpediatriclifesupportneonatallifesupporteducationimplementationandteamsandfirstaidtaskforces"
+    "effectofdiscontinuingantihypertensivesonperioperativehypotensioninolderpatientsbeforenoncardiacsurgerymulticentrerandomiseddoubleblindcontrolledtrial",
+    "cangrelorversuscrushedticagrelorinacutemyocardialinfarctioncomplicatedbycardiogenicshockdaptshockamiarandomiseddoubleblindtrial",
+    "communityandemsinterventionstoimprovesurvivalincardiacarrest",
+    "prehospitalextracorporeallifesupportinrefractoryoutofhospitalcardiacarrest",
+    "efficacyandsafetyofoliceridineversusremifentanilforanalgesiainmechanicallyventilatedcriticallyilladultscoroamamulticenterassessorblindednoninferiorityrandomizedcontrolledtrial"
   ],
-  "derniere_execution": "2026-11-07"
+  "derniere_execution": "2026-11-14"
 }

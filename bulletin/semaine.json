@@ -1,15 +1,15 @@
 {
- "date": "2026-11-07",
- "sujet": "Les sorties de la semaine du lundi 2 novembre",
+ "date": "2026-11-14",
+ "sujet": "Les sorties de la semaine du lundi 9 novembre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-11-02",
+ "lundi": "2026-11-09",
  "nb": 5,
  "ancres": [
-  "individualized-mean-arterial-pressure-during-cardiac-surgery-the",
-  "thoracic-epidural-versus-paravertebral-blockade-for-reducing-chr",
-  "sodium-bicarbonate-therapy-for-metabolic-acidosis-in-critically",
-  "perioperative-respiratory-adverse-events-in-children-undergoing",
-  "2026-international-liaison-committee-on-resuscitation-consensus"
+  "effect-of-discontinuing-antihypertensives-on-perioperative-hypot",
+  "cangrelor-versus-crushed-ticagrelor-in-acute-myocardial-infarcti",
+  "community-and-ems-interventions-to-improve-survival-in-cardiac-a",
+  "prehospital-extracorporeal-life-support-in-refractory-out-of-hos",
+  "efficacy-and-safety-of-oliceridine-versus-remifentanil-for-analg"
  ]
 }
