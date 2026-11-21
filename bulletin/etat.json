@@ -206,7 +206,9 @@
     "cangrelorversuscrushedticagrelorinacutemyocardialinfarctioncomplicatedbycardiogenicshockdaptshockamiarandomiseddoubleblindtrial",
     "communityandemsinterventionstoimprovesurvivalincardiacarrest",
     "prehospitalextracorporeallifesupportinrefractoryoutofhospitalcardiacarrest",
-    "efficacyandsafetyofoliceridineversusremifentanilforanalgesiainmechanicallyventilatedcriticallyilladultscoroamamulticenterassessorblindednoninferiorityrandomizedcontrolledtrial"
+    "efficacyandsafetyofoliceridineversusremifentanilforanalgesiainmechanicallyventilatedcriticallyilladultscoroamamulticenterassessorblindednoninferiorityrandomizedcontrolledtrial",
+    "effectofmegadosevitamincinpatientswithsepsisthecemvisrandomizedclinicaltrial",
+    "highflownasalcannulaversusconventionaloxygentherapyinadultswithdenovoacutehypoxemicrespiratoryfailureasystematicreviewandmetaanalysiswithtrialsequentialanalysis"
   ],
   "bulletins": [
     {
@@ -262,14 +264,16 @@
       "fichier": "bulletin-2026-11-14.pdf",
       "nb": 5,
       "crit": 1
+    },
+    {
+      "date": "2026-11-21",
+      "fichier": "bulletin-2026-11-21.pdf",
+      "nb": 1,
+      "crit": 0
     }
   ],
   "dernier_lot": [
-    "effectofdiscontinuingantihypertensivesonperioperativehypotensioninolderpatientsbeforenoncardiacsurgerymulticentrerandomiseddoubleblindcontrolledtrial",
-    "cangrelorversuscrushedticagrelorinacutemyocardialinfarctioncomplicatedbycardiogenicshockdaptshockamiarandomiseddoubleblindtrial",
-    "communityandemsinterventionstoimprovesurvivalincardiacarrest",
-    "prehospitalextracorporeallifesupportinrefractoryoutofhospitalcardiacarrest",
-    "efficacyandsafetyofoliceridineversusremifentanilforanalgesiainmechanicallyventilatedcriticallyilladultscoroamamulticenterassessorblindednoninferiorityrandomizedcontrolledtrial"
+    "highflownasalcannulaversusconventionaloxygentherapyinadultswithdenovoacutehypoxemicrespiratoryfailureasystematicreviewandmetaanalysiswithtrialsequentialanalysis"
   ],
-  "derniere_execution": "2026-11-14"
+  "derniere_execution": "2026-11-21"
 }

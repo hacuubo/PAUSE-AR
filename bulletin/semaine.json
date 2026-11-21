@@ -1,15 +1,11 @@
 {
- "date": "2026-11-14",
- "sujet": "Les sorties de la semaine du lundi 9 novembre",
+ "date": "2026-11-21",
+ "sujet": "Les sorties de la semaine du lundi 16 novembre",
  "rappel": false,
  "congres": "",
- "lundi": "2026-11-09",
- "nb": 5,
+ "lundi": "2026-11-16",
+ "nb": 1,
  "ancres": [
-  "effect-of-discontinuing-antihypertensives-on-perioperative-hypot",
-  "cangrelor-versus-crushed-ticagrelor-in-acute-myocardial-infarcti",
-  "community-and-ems-interventions-to-improve-survival-in-cardiac-a",
-  "prehospital-extracorporeal-life-support-in-refractory-out-of-hos",
-  "efficacy-and-safety-of-oliceridine-versus-remifentanil-for-analg"
+  "high-flow-nasal-cannula-versus-conventional-oxygen-therapy-in-ad"
  ]
 }
